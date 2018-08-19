@@ -1,0 +1,975 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Graphics/Tilesets/wood_tileset.png" type="Texture" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
+
+[sub_resource type="ConvexPolygonShape2D" id=2]
+
+custom_solver_bias = 0.0
+points = PoolVector2Array( -16, -6, 6, 16, -16, 16 )
+
+[node name="Node2D" type="Node2D" index="0"]
+
+[node name="Grass0" type="Sprite" parent="." index="0"]
+
+editor/display_folded = true
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass0/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass1" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 32, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 1
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass1/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass2" type="Sprite" parent="." index="2"]
+
+editor/display_folded = true
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 2
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass2/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass3" type="Sprite" parent="." index="3"]
+
+editor/display_folded = true
+position = Vector2( 96, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 3
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass3/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass4" type="Sprite" parent="." index="4"]
+
+editor/display_folded = true
+position = Vector2( 128, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 4
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass4" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass4/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassWaterTopLeft" type="Sprite" parent="." index="5"]
+
+editor/display_folded = true
+position = Vector2( 160, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 5
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterTopLeft" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterTopLeft/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="GrassWaterTop" type="Sprite" parent="." index="6"]
+
+editor/display_folded = true
+position = Vector2( 192, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 6
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterTop" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterTop/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassWaterTopRight" type="Sprite" parent="." index="7"]
+
+position = Vector2( 224, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 7
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterTopRight" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterTopRight/StaticBody2D" index="0"]
+
+shape = SubResource( 2 )
+
+[node name="Grass5" type="Sprite" parent="." index="8"]
+
+editor/display_folded = true
+position = Vector2( 256, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 8
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass5" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass5/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassCobblestone00" type="Sprite" parent="." index="9"]
+
+editor/display_folded = true
+position = Vector2( 288, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 9
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassCobblestone00" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassCobblestone00/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Cobblestone0" type="Sprite" parent="." index="10"]
+
+editor/display_folded = true
+position = Vector2( 320, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 10
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cobblestone0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cobblestone0/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Cobblestone1" type="Sprite" parent="." index="11"]
+
+editor/display_folded = true
+position = Vector2( 352, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 11
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cobblestone1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cobblestone1/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassCobblestone10" type="Sprite" parent="." index="12"]
+
+editor/display_folded = true
+position = Vector2( 384, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 12
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassCobblestone10" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassCobblestone10/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass8" type="Sprite" parent="." index="13"]
+
+editor/display_folded = true
+position = Vector2( 416, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 13
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass8" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass8/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass9" type="Sprite" parent="." index="14"]
+
+editor/display_folded = true
+position = Vector2( 448, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 14
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass9" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass9/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass10" type="Sprite" parent="." index="15"]
+
+editor/display_folded = true
+position = Vector2( 480, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 15
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass10" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass10/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass11" type="Sprite" parent="." index="16"]
+
+editor/display_folded = true
+position = Vector2( 0, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 16
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass11" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass11/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass12" type="Sprite" parent="." index="17"]
+
+editor/display_folded = true
+position = Vector2( 32, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 17
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass12" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass12/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass13" type="Sprite" parent="." index="18"]
+
+editor/display_folded = true
+position = Vector2( 64, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 18
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass13" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass13/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass14" type="Sprite" parent="." index="19"]
+
+editor/display_folded = true
+position = Vector2( 96, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 19
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass14" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass14/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass15" type="Sprite" parent="." index="20"]
+
+editor/display_folded = true
+position = Vector2( 128, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 20
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass15" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass15/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassWaterLeft" type="Sprite" parent="." index="21"]
+
+editor/display_folded = true
+position = Vector2( 160, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 21
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterLeft" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterLeft/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassWaterCenter" type="Sprite" parent="." index="22"]
+
+editor/display_folded = true
+position = Vector2( 192, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 22
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterCenter" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterCenter/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassWaterRight" type="Sprite" parent="." index="23"]
+
+editor/display_folded = true
+position = Vector2( 224, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 23
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterRight" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterRight/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass16" type="Sprite" parent="." index="24"]
+
+editor/display_folded = true
+position = Vector2( 256, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 24
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass16" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass16/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassCobblestone01" type="Sprite" parent="." index="25"]
+
+editor/display_folded = true
+position = Vector2( 288, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 25
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassCobblestone01" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassCobblestone01/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Cobblestone2" type="Sprite" parent="." index="26"]
+
+editor/display_folded = true
+position = Vector2( 320, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 26
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cobblestone2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cobblestone2/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Cobblestone3" type="Sprite" parent="." index="27"]
+
+editor/display_folded = true
+position = Vector2( 352, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 27
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Cobblestone3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cobblestone3/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassCobblestone11" type="Sprite" parent="." index="28"]
+
+editor/display_folded = true
+position = Vector2( 384, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 28
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassCobblestone11" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassCobblestone11/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass17" type="Sprite" parent="." index="29"]
+
+editor/display_folded = true
+position = Vector2( 416, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 29
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass17" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass17/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass18" type="Sprite" parent="." index="30"]
+
+editor/display_folded = true
+position = Vector2( 448, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 30
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass18" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass18/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass19" type="Sprite" parent="." index="31"]
+
+editor/display_folded = true
+position = Vector2( 480, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 31
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass19" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass19/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass20" type="Sprite" parent="." index="32"]
+
+editor/display_folded = true
+position = Vector2( 0, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 32
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass20" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass20/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass21" type="Sprite" parent="." index="33"]
+
+editor/display_folded = true
+position = Vector2( 32, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 33
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass21" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass21/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass22" type="Sprite" parent="." index="34"]
+
+editor/display_folded = true
+position = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 34
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass22" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass22/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass23" type="Sprite" parent="." index="35"]
+
+editor/display_folded = true
+position = Vector2( 96, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 35
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass23" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass23/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Grass24" type="Sprite" parent="." index="36"]
+
+editor/display_folded = true
+position = Vector2( 128, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 36
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Grass24" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass24/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassWaterBottomLeft" type="Sprite" parent="." index="37"]
+
+editor/display_folded = true
+position = Vector2( 160, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 37
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterBottomLeft" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterBottomLeft/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassWaterBottom" type="Sprite" parent="." index="38"]
+
+editor/display_folded = true
+position = Vector2( 192, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 38
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterBottom" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterBottom/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="GrassWaterBottomRight" type="Sprite" parent="." index="39"]
+
+editor/display_folded = true
+position = Vector2( 224, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 16
+frame = 39
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassWaterBottomRight" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterBottomRight/StaticBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+
