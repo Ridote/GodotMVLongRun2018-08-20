@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Sprites/Player/character(whitebeard).png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Textures/light.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -9,9 +10,115 @@ custom_solver_bias = 0.0
 radius = 10.4068
 height = 8.313
 
+[sub_resource type="Animation" id=10]
+
+resource_name = "LightAttenuation"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:texture_scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.98 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 1.0, 0.95 ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "IddleDown"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 130 ]
+}
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "IddleLeft"
+length = 0.1
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 117 ]
+}
+
 [sub_resource type="Animation" id=4]
 
-resource_name = "WalkDown"
+resource_name = "IddleRight"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 143 ]
+}
+
+[sub_resource type="Animation" id=5]
+
+resource_name = "IddleUp"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 104 ]
+}
+
+[sub_resource type="Animation" id=6]
+
 length = 0.8
 loop = false
 step = 0.1
@@ -28,9 +135,8 @@ tracks/0/keys = {
 "values": [ 130, 131, 132, 133, 134, 135, 136, 137, 138 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=7]
 
-resource_name = "WalkLeft"
 length = 0.8
 loop = false
 step = 0.1
@@ -47,9 +153,8 @@ tracks/0/keys = {
 "values": [ 117, 118, 119, 120, 121, 122, 123, 124 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=8]
 
-resource_name = "WalkRight"
 length = 0.8
 loop = false
 step = 0.1
@@ -66,9 +171,8 @@ tracks/0/keys = {
 "values": [ 143, 144, 145, 146, 147, 148, 149, 150 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=9]
 
-resource_name = "WalkUp"
 length = 0.8
 loop = false
 step = 0.1
@@ -100,7 +204,7 @@ speed = 100
 texture = ExtResource( 2 )
 vframes = 21
 hframes = 13
-frame = 138
+frame = 131
 _sections_unfolded = [ "Animation", "Region" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
@@ -108,17 +212,55 @@ _sections_unfolded = [ "Animation", "Region" ]
 position = Vector2( 0, 19.833 )
 shape = SubResource( 1 )
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="2"]
+[node name="Light2D" type="Light2D" parent="." index="2"]
+
+enabled = true
+editor_only = false
+texture = ExtResource( 3 )
+offset = Vector2( 0, 0 )
+texture_scale = 0.98
+color = Color( 1, 1, 1, 1 )
+energy = 0.95
+mode = 0
+range_height = 0.0
+range_z_min = -1024
+range_z_max = 1024
+range_layer_min = 0
+range_layer_max = 0
+range_item_cull_mask = 1
+shadow_enabled = false
+shadow_color = Color( 0, 0, 0, 0 )
+shadow_buffer_size = 2048
+shadow_gradient_length = 0.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
+shadow_item_cull_mask = 1
+
+[node name="LightAnimation" type="AnimationPlayer" parent="Light2D" index="0"]
+
+root_node = NodePath("..")
+autoplay = "LightAttenuation"
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/LightAttenuation = SubResource( 10 )
+blend_times = [  ]
+
+[node name="MovementAnimation" type="AnimationPlayer" parent="." index="3"]
 
 root_node = NodePath("..")
 autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/WalkDown = SubResource( 4 )
-anims/WalkLeft = SubResource( 2 )
-anims/WalkRight = SubResource( 3 )
-anims/WalkUp = SubResource( 5 )
+anims/IddleDown = SubResource( 2 )
+anims/IddleLeft = SubResource( 3 )
+anims/IddleRight = SubResource( 4 )
+anims/IddleUp = SubResource( 5 )
+anims/WalkDown = SubResource( 6 )
+anims/WalkLeft = SubResource( 7 )
+anims/WalkRight = SubResource( 8 )
+anims/WalkUp = SubResource( 9 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 

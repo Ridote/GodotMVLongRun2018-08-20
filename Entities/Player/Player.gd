@@ -3,14 +3,7 @@ extends KinematicBody2D
 export var speed = 300
 
 #Control
-#Last direction to set up an iddle animation > 0 Up / 1 Down / 2 Right / 3 Left
-enum LAST_DIRECTION{
- 	UP,
- 	DOWN,
-	RIGHT,
-	LEFT
-}
-var lastDirection = LAST_DIRECTION.UP
+var playingAnimation = ""
 
 #Input
 var skill1 = false
@@ -22,6 +15,13 @@ var moveRight = false
 var moveLeft = false
 var moveDown = false
 var moveUp = false
+
+func _ready():
+	$MovementAnimation.get_animation("WalkUp").set_loop(true)
+	$MovementAnimation.get_animation("WalkLeft").set_loop(true)
+	$MovementAnimation.get_animation("WalkRight").set_loop(true)
+	$MovementAnimation.get_animation("WalkDown").set_loop(true)
+	$Light2D/LightAnimation.get_animation("LightAttenuation").set_loop(true)
 
 func _physics_process(delta):
 	readInput()
@@ -46,25 +46,23 @@ func move(delta):
 	move_and_slide(speedDirection*speed)
 
 func animate(speedDirection):
+	var prevAnim = playingAnimation
 	if speedDirection.x > 0.1:
-		$AnimationPlayer.play("WalkRight")
-		lastDirection = LAST_DIRECTION.RIGHT
+		playingAnimation = "WalkRight"
 	elif speedDirection.x < -0.1:
-		$AnimationPlayer.play("WalkLeft")
-		lastDirection = LAST_DIRECTION.LEFT
+		playingAnimation = "WalkLeft"
 	elif speedDirection.y < -0.1:
-		$AnimationPlayer.play("WalkUp")
-		lastDirection = LAST_DIRECTION.UP
+		playingAnimation = "WalkUp"
 	elif speedDirection.y > 0.1:
-		$AnimationPlayer.play("WalkDown")
-		lastDirection = LAST_DIRECTION.DOWN
+		playingAnimation = "WalkDown"
 	else:
-		if lastDirection == LAST_DIRECTION.UP:
-			pass
-		elif lastDirection == LAST_DIRECTION.DOWN:
-			pass
-		elif lastDirection == LAST_DIRECTION.LEFT:
-			pass
+		if playingAnimation in ["WalkRight", "IddleRight"]:
+			playingAnimation = "IddleRight"
+		elif playingAnimation in ["WalkLeft", "IddleLeft"]:
+			playingAnimation = "IddleLeft"
+		elif playingAnimation in ["WalkUp", "IddleUp"]:
+			playingAnimation = "IddleUp"
 		else:
-			pass
-			
+			playingAnimation = "IddleDown"
+	if prevAnim != playingAnimation:
+		$MovementAnimation.play(playingAnimation)
