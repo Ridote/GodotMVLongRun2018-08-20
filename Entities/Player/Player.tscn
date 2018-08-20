@@ -189,7 +189,7 @@ tracks/0/keys = {
 "values": [ 104, 105, 106, 107, 108, 109, 110, 111, 112 ]
 }
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -197,9 +197,34 @@ collision_mask = 60
 collision/safe_margin = 0.08
 script = ExtResource( 1 )
 _sections_unfolded = [ "Collision" ]
-speed = 100
+speed = 300.0
 
-[node name="Sprite" type="Sprite" parent="." index="0"]
+[node name="Camera2D" type="Camera2D" parent="." index="0"]
+
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
 
 texture = ExtResource( 2 )
 vframes = 21
@@ -207,12 +232,12 @@ hframes = 13
 frame = 131
 _sections_unfolded = [ "Animation", "Region" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
 position = Vector2( 0, 19.833 )
 shape = SubResource( 1 )
 
-[node name="Light2D" type="Light2D" parent="." index="2"]
+[node name="Light2D" type="Light2D" parent="." index="3"]
 
 enabled = true
 editor_only = false
@@ -246,7 +271,7 @@ playback_speed = 1.0
 anims/LightAttenuation = SubResource( 10 )
 blend_times = [  ]
 
-[node name="MovementAnimation" type="AnimationPlayer" parent="." index="3"]
+[node name="MovementAnimation" type="AnimationPlayer" parent="." index="4"]
 
 root_node = NodePath("..")
 autoplay = ""

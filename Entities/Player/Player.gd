@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-export var speed = 300
+export var speed = 300.0
 
 #Control
 var playingAnimation = ""
