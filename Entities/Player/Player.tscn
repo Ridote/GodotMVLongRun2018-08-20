@@ -1,8 +1,46 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Sprites/Player/character(whitebeard).png" type="Texture" id=2]
 [ext_resource path="res://Graphics/Textures/light.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=11]
+
+resource_name = "Damaged"
+length = 0.2
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.394531, 0.394531, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=12]
+
+resource_name = "NotDamaged"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -10,7 +48,7 @@ custom_solver_bias = 0.0
 radius = 10.4068
 height = 8.313
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=2]
 
 resource_name = "LightAttenuation"
 length = 0.2
@@ -41,9 +79,8 @@ tracks/1/keys = {
 "values": [ 1.0, 0.95 ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "IddleDown"
 length = 1.0
 loop = false
 step = 0.1
@@ -60,9 +97,8 @@ tracks/0/keys = {
 "values": [ 130 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource_name = "IddleLeft"
 length = 0.1
 loop = false
 step = 0.1
@@ -79,9 +115,8 @@ tracks/0/keys = {
 "values": [ 117 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 
-resource_name = "IddleRight"
 length = 1.0
 loop = false
 step = 0.1
@@ -98,9 +133,8 @@ tracks/0/keys = {
 "values": [ 143 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 
-resource_name = "IddleUp"
 length = 1.0
 loop = false
 step = 0.1
@@ -117,7 +151,7 @@ tracks/0/keys = {
 "values": [ 104 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
 length = 0.8
 loop = false
@@ -135,7 +169,7 @@ tracks/0/keys = {
 "values": [ 130, 131, 132, 133, 134, 135, 136, 137, 138 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 
 length = 0.8
 loop = false
@@ -153,7 +187,7 @@ tracks/0/keys = {
 "values": [ 117, 118, 119, 120, 121, 122, 123, 124 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=9]
 
 length = 0.8
 loop = false
@@ -171,7 +205,7 @@ tracks/0/keys = {
 "values": [ 143, 144, 145, 146, 147, 148, 149, 150 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=10]
 
 length = 0.8
 loop = false
@@ -230,7 +264,18 @@ texture = ExtResource( 2 )
 vframes = 21
 hframes = 13
 frame = 131
-_sections_unfolded = [ "Animation", "Region" ]
+_sections_unfolded = [ "Visibility" ]
+
+[node name="DamagedAnimation" type="AnimationPlayer" parent="Sprite" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Damaged = SubResource( 11 )
+anims/NotDamaged = SubResource( 12 )
+blend_times = [  ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
@@ -268,7 +313,7 @@ autoplay = "LightAttenuation"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/LightAttenuation = SubResource( 10 )
+anims/LightAttenuation = SubResource( 2 )
 blend_times = [  ]
 
 [node name="MovementAnimation" type="AnimationPlayer" parent="." index="4"]
@@ -278,15 +323,24 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/IddleDown = SubResource( 2 )
-anims/IddleLeft = SubResource( 3 )
-anims/IddleRight = SubResource( 4 )
-anims/IddleUp = SubResource( 5 )
-anims/WalkDown = SubResource( 6 )
-anims/WalkLeft = SubResource( 7 )
-anims/WalkRight = SubResource( 8 )
-anims/WalkUp = SubResource( 9 )
+anims/IddleDown = SubResource( 3 )
+anims/IddleLeft = SubResource( 4 )
+anims/IddleRight = SubResource( 5 )
+anims/IddleUp = SubResource( 6 )
+anims/WalkDown = SubResource( 7 )
+anims/WalkLeft = SubResource( 8 )
+anims/WalkRight = SubResource( 9 )
+anims/WalkUp = SubResource( 10 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
+
+[node name="DamagedTimer" type="Timer" parent="." index="5"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[connection signal="timeout" from="DamagedTimer" to="." method="_on_Damaged_timeout"]
 
 

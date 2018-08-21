@@ -4,6 +4,8 @@ export var speed = 300.0
 
 #Control
 var playingAnimation = ""
+var damaged = false
+var dmgInvulnTime = 2.0
 
 #Input
 var skill1 = false
@@ -22,6 +24,7 @@ func _ready():
 	$MovementAnimation.get_animation("WalkRight").set_loop(true)
 	$MovementAnimation.get_animation("WalkDown").set_loop(true)
 	$Light2D/LightAnimation.get_animation("LightAttenuation").set_loop(true)
+	$Sprite/DamagedAnimation.get_animation("Damaged").set_loop(true)
 
 func _physics_process(delta):
 	readInput()
@@ -66,3 +69,18 @@ func animate(speedDirection):
 			playingAnimation = "IddleDown"
 	if prevAnim != playingAnimation:
 		$MovementAnimation.play(playingAnimation)
+
+func receiveDamage(fis, mag):
+	if !damaged:
+		damaged = true
+		$Sprite/DamagedAnimation.play("Damaged")
+		#Removing enemies and enemies projectiles from the collision mask
+		collision_mask &= ~12
+		$DamagedTimer.set_wait_time(dmgInvulnTime)
+		$DamagedTimer.start()
+
+func _on_Damaged_timeout():
+	damaged = false
+	$Sprite/DamagedAnimation.play("NotDamaged")
+	#Writting back enemies and enemies projectiles into the collision mask
+	collision_mask |= 12
