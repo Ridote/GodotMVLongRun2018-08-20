@@ -33,11 +33,11 @@ extents = Vector2( 16.0642, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 15.9984, 8.79155 )
 
-[node name="DevourerHead" type="Node2D" index="0"]
+[node name="DevourerHead" type="Node2D"]
 
 script = ExtResource( 1 )
-length = 5
-numPositions = 10
+length = 100
+numPositions = 5
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 

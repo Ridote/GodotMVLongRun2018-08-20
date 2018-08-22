@@ -5,9 +5,6 @@ var next = null
 var positionManagerScript = preload("res://Entities/Enemies/Devourer/PositionRegister.gd")
 var positionManager = null
 
-#Is this nasty? is there any other way to do it?
-var bodyClass = preload("res://Entities/Enemies/Devourer/Body.tscn")
-
 func setBodies(previous, next):
 	self.previous = previous
 	self.next = next
@@ -24,7 +21,7 @@ func update():
 	else:
 		set_body(true)
 	global_position = previous.positionManager.getPosition(0)
-	rotation = previous.positionManager.getRotation(0)
+	global_rotation = previous.positionManager.getRotation(0)
 	positionManager.updatePositions(global_position, rotation)
 	if next != null:
 		next.update()
@@ -35,7 +32,8 @@ func set_body(body = true):
 	else:
 		$Sprite.frame = 2
 func grow(length):
-	next = bodyClass.instance()
+	next = self.duplicate()
+	
 	add_child(next)
 	next.setBodies(self, null)
 	if length > 0:

@@ -1,7 +1,7 @@
 extends Node2D
 
-export var length = 5
-export var numPositions = 10
+export var length = 100
+export var numPositions = 5
 
 var positionManagerScript = preload("res://Entities/Enemies/Devourer/PositionRegister.gd")
 var positionManager = null
@@ -19,7 +19,7 @@ func _ready():
 	$ChangePositionTimer.start()
 	$TurnUpdate.start()
 	positionManager = positionManagerScript.new()
-	positionManager.initPositions($KinematicBody2D.global_position, $KinematicBody2D.rotation, numPositions)
+	positionManager.initPositions($KinematicBody2D.global_position, $KinematicBody2D.global_rotation, numPositions)
 	firstBody = bodyClass.instance()
 	firstBody.setBodies(self, null)
 	
