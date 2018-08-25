@@ -33,14 +33,16 @@ extents = Vector2( 16.0642, 10 )
 custom_solver_bias = 0.0
 extents = Vector2( 15.9984, 8.79155 )
 
-[node name="DevourerHead" type="Node2D"]
+[node name="DevourerHead" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 length = 100
 numPositions = 5
+path = [  ]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
+editor/display_folded = true
 input_pickable = false
 collision_layer = 4
 collision_mask = 48
@@ -95,24 +97,6 @@ position = Vector2( 0, -8 )
 shape = SubResource( 3 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="ChangePositionTimer" type="Timer" parent="." index="1"]
-
-process_mode = 1
-wait_time = 0.1
-one_shot = false
-autostart = false
-
-[node name="TurnUpdate" type="Timer" parent="." index="2"]
-
-process_mode = 1
-wait_time = 2.0
-one_shot = false
-autostart = false
-
 [connection signal="body_entered" from="KinematicBody2D/Head/Area2D" to="." method="_on_Area2D_body_entered"]
-
-[connection signal="timeout" from="ChangePositionTimer" to="." method="_on_ChangePositionTimer_timeout"]
-
-[connection signal="timeout" from="TurnUpdate" to="." method="_on_TurnUpdate_timeout"]
 
 
