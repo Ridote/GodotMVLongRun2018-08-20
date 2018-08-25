@@ -37,13 +37,13 @@ vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
 
-[sub_resource type="NavigationPolygon" id=48]
+[sub_resource type="NavigationPolygon" id=54]
 
 vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
 
-[sub_resource type="NavigationPolygon" id=49]
+[sub_resource type="NavigationPolygon" id=55]
 
 vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
@@ -193,7 +193,7 @@ vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
 
-[node name="Node2D" type="Node2D" index="0"]
+[node name="Node2D" type="Node2D"]
 
 [node name="Grass0" type="Sprite" parent="." index="0"]
 
@@ -440,7 +440,7 @@ shape = SubResource( 1 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass5" index="1"]
 
-navpoly = SubResource( 48 )
+navpoly = SubResource( 54 )
 enabled = true
 
 [node name="GrassCobblestone00" type="Sprite" parent="." index="9"]
@@ -469,7 +469,7 @@ shape = SubResource( 1 )
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone00" index="1"]
 
-navpoly = SubResource( 49 )
+navpoly = SubResource( 55 )
 enabled = true
 
 [node name="Cobblestone0" type="Sprite" parent="." index="10"]

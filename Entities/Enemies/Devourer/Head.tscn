@@ -33,7 +33,7 @@ extents = Vector2( 12.881, 7.33015 )
 custom_solver_bias = 0.0
 extents = Vector2( 12.6921, 6.74464 )
 
-[node name="DevourerHead" type="Node2D"]
+[node name="DevourerHead" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
