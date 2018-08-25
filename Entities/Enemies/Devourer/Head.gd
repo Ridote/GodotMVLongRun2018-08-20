@@ -29,7 +29,7 @@ func _ready():
 func _physics_process(delta):
 	if path.size() > 0:
 		$KinematicBody2D.look_at(path[0])
-		$KinematicBody2D.rotation += 90
+		$KinematicBody2D.rotation += 89.5
 		if $KinematicBody2D.global_position.distance_to(path[0]) < 2:
 			path.remove(0)
 	else:
