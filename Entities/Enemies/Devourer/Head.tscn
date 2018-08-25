@@ -26,12 +26,12 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 16.0642, 10 )
+extents = Vector2( 12.881, 7.33015 )
 
 [sub_resource type="RectangleShape2D" id=3]
 
 custom_solver_bias = 0.0
-extents = Vector2( 15.9984, 8.79155 )
+extents = Vector2( 12.6921, 6.74464 )
 
 [node name="DevourerHead" type="Node2D" index="0"]
 
@@ -42,7 +42,6 @@ path = [  ]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 4
 collision_mask = 48
