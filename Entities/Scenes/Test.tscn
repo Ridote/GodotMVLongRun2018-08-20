@@ -1,29 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Entities/Scenes/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Maps/TestMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Enemies/Devourer/Head.tscn" type="PackedScene" id=4]
 
-[sub_resource type="GDScript" id=1]
-
-script/source = "extends Node2D
-
-# class member variables go here, for example:
-# var a = 2
-# var b = \"textvar\"
-
-func _ready():
-	#$Camera2D.focusObject = $Player
-	pass
-
-func update_path():
-	pass # replace with function body
-"
-
 [node name="Test" type="Node2D"]
-
-script = SubResource( 1 )
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="0"]
 
@@ -37,6 +19,5 @@ script = ExtResource( 1 )
 
 position = Vector2( -124.475, -35.148 )
 length = 10
-pathfindingRate = 3
 
 
