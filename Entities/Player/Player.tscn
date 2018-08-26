@@ -1,10 +1,10 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Sprites/Player/character(whitebeard).png" type="Texture" id=2]
 [ext_resource path="res://Graphics/Textures/light.png" type="Texture" id=3]
 
-[sub_resource type="Animation" id=11]
+[sub_resource type="Animation" id=1]
 
 resource_name = "Damaged"
 length = 0.2
@@ -23,7 +23,7 @@ tracks/0/keys = {
 "values": [ Color( 1, 0.394531, 0.394531, 1 ), Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=12]
+[sub_resource type="Animation" id=2]
 
 resource_name = "NotDamaged"
 length = 1.0
@@ -42,15 +42,14 @@ tracks/0/keys = {
 "values": [ Color( 1, 1, 1, 1 ) ]
 }
 
-[sub_resource type="CapsuleShape2D" id=1]
+[sub_resource type="CapsuleShape2D" id=3]
 
 custom_solver_bias = 0.0
 radius = 10.4068
 height = 8.313
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=4]
 
-resource_name = "LightAttenuation"
 length = 0.2
 loop = false
 step = 0.1
@@ -79,7 +78,7 @@ tracks/1/keys = {
 "values": [ 1.0, 0.95 ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=5]
 
 length = 1.0
 loop = false
@@ -97,7 +96,7 @@ tracks/0/keys = {
 "values": [ 130 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=6]
 
 length = 0.1
 loop = false
@@ -115,7 +114,7 @@ tracks/0/keys = {
 "values": [ 117 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=7]
 
 length = 1.0
 loop = false
@@ -133,7 +132,7 @@ tracks/0/keys = {
 "values": [ 143 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 
 length = 1.0
 loop = false
@@ -151,7 +150,7 @@ tracks/0/keys = {
 "values": [ 104 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 
 length = 0.8
 loop = false
@@ -169,7 +168,7 @@ tracks/0/keys = {
 "values": [ 130, 131, 132, 133, 134, 135, 136, 137, 138 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=10]
 
 length = 0.8
 loop = false
@@ -187,7 +186,7 @@ tracks/0/keys = {
 "values": [ 117, 118, 119, 120, 121, 122, 123, 124 ]
 }
 
-[sub_resource type="Animation" id=9]
+[sub_resource type="Animation" id=11]
 
 length = 0.8
 loop = false
@@ -205,7 +204,7 @@ tracks/0/keys = {
 "values": [ 143, 144, 145, 146, 147, 148, 149, 150 ]
 }
 
-[sub_resource type="Animation" id=10]
+[sub_resource type="Animation" id=12]
 
 length = 0.8
 loop = false
@@ -223,7 +222,61 @@ tracks/0/keys = {
 "values": [ 104, 105, 106, 107, 108, 109, 110, 111, 112 ]
 }
 
-[node name="Player" type="KinematicBody2D"]
+[sub_resource type="Gradient" id=13]
+
+offsets = PoolRealArray( 0, 1 )
+colors = PoolColorArray( 0, 0, 0, 1, 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=14]
+
+flags = 4
+gradient = SubResource( 13 )
+width = 5
+
+[sub_resource type="Animation" id=15]
+
+resource_name = "Slash"
+length = 0.4
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.078125, 0.078125, 0.078125, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 10.143, 49.4042 ), Vector2( 1.72658, 49.4042 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="Player" type="KinematicBody2D" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -260,6 +313,7 @@ editor_draw_drag_margin = false
 
 [node name="Sprite" type="Sprite" parent="." index="1"]
 
+editor/display_folded = true
 texture = ExtResource( 2 )
 vframes = 21
 hframes = 13
@@ -273,17 +327,18 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Damaged = SubResource( 11 )
-anims/NotDamaged = SubResource( 12 )
+anims/Damaged = SubResource( 1 )
+anims/NotDamaged = SubResource( 2 )
 blend_times = [  ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." index="2"]
 
 position = Vector2( 0, 19.833 )
-shape = SubResource( 1 )
+shape = SubResource( 3 )
 
 [node name="Light2D" type="Light2D" parent="." index="3"]
 
+editor/display_folded = true
 enabled = true
 editor_only = false
 texture = ExtResource( 3 )
@@ -313,7 +368,7 @@ autoplay = "LightAttenuation"
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/LightAttenuation = SubResource( 2 )
+anims/LightAttenuation = SubResource( 4 )
 blend_times = [  ]
 
 [node name="MovementAnimation" type="AnimationPlayer" parent="." index="4"]
@@ -323,14 +378,14 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/IddleDown = SubResource( 3 )
-anims/IddleLeft = SubResource( 4 )
-anims/IddleRight = SubResource( 5 )
-anims/IddleUp = SubResource( 6 )
-anims/WalkDown = SubResource( 7 )
-anims/WalkLeft = SubResource( 8 )
-anims/WalkRight = SubResource( 9 )
-anims/WalkUp = SubResource( 10 )
+anims/IddleDown = SubResource( 5 )
+anims/IddleLeft = SubResource( 6 )
+anims/IddleRight = SubResource( 7 )
+anims/IddleUp = SubResource( 8 )
+anims/WalkDown = SubResource( 9 )
+anims/WalkLeft = SubResource( 10 )
+anims/WalkRight = SubResource( 11 )
+anims/WalkUp = SubResource( 12 )
 blend_times = [  ]
 _sections_unfolded = [ "Playback Options" ]
 
@@ -340,6 +395,32 @@ process_mode = 1
 wait_time = 1.0
 one_shot = false
 autostart = false
+
+[node name="Casting" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 0.01
+one_shot = false
+autostart = false
+
+[node name="Sword" type="Sprite" parent="." index="7"]
+
+visible = false
+modulate = Color( 0.078125, 0.078125, 0.078125, 1 )
+position = Vector2( 25.2493, 80 )
+scale = Vector2( 1.72658, 49.4042 )
+texture = SubResource( 14 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="SwordAnimation" type="AnimationPlayer" parent="Sword" index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Slash = SubResource( 15 )
+blend_times = [  ]
 
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_Damaged_timeout"]
 

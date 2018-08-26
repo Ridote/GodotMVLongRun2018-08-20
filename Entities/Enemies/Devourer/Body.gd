@@ -33,7 +33,6 @@ func set_body(body = true):
 	else:
 		$Sprite.frame = 2
 func grow(length):
-	print("grow", length)
 	next = bodyFactory.instance()
 	add_child(next)
 	next.setBodies(self, null)

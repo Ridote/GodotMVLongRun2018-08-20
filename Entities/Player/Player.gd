@@ -6,7 +6,8 @@ export var speed = 300.0
 var playingAnimation = ""
 var damaged = false
 var dmgInvulnTime = 2.0
-
+var casting = false
+var speedDirection = Vector2(0,0)
 #Input
 var skill1 = false
 var skill2 = false
@@ -27,8 +28,15 @@ func _ready():
 	$Sprite/DamagedAnimation.get_animation("Damaged").set_loop(true)
 
 func _physics_process(delta):
-	readInput()
-	move(delta)
+	if !casting:
+		readInput()
+		move(delta)
+		if skill1:
+			$Casting.wait_time = 2
+			$Casting.start()
+			casting = true
+			$Sword/SwordAnimation.play("Slash")
+	animate(speedDirection)
 
 func readInput():
 	skill1 = Input.is_action_pressed("Skill1")
@@ -42,8 +50,7 @@ func readInput():
 	moveDown = Input.is_action_pressed("ui_down")
 	
 func move(delta):
-	var speedDirection = Vector2(int(moveRight) + (int(moveLeft)*-1), int(moveDown) + (int(moveUp)*-1)).normalized()
-	animate(speedDirection)
+	speedDirection = Vector2(int(moveRight) + (int(moveLeft)*-1), int(moveDown) + (int(moveUp)*-1)).normalized()
 	#move_and_collide <- needs delta
 	#move_and_slide <- doesn't need delta
 	move_and_slide(speedDirection*speed)
