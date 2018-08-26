@@ -34,8 +34,8 @@ func _physics_process(delta):
 		if $KinematicBody2D.global_position.distance_to(path[0]) < 2:
 			path.remove(0)
 	else:
-		# We could calculate a new path before completely consuming the old one to get a smoother movement
-		self.get_parent().update_path()
+		if self.get_parent().get_node("Player"):
+			path = self.get_parent().update_path($KinematicBody2D/Mouth, self.get_parent().get_node("Player"))
 	
 	var speedDirection = Vector2(sin($KinematicBody2D.rotation), -cos($KinematicBody2D.rotation)).normalized()
 	var collision = $KinematicBody2D.move_and_collide(speedDirection*speed*delta)

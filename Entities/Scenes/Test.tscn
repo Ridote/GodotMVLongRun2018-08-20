@@ -21,7 +21,7 @@ func update_path():
 	pass # replace with function body
 "
 
-[node name="Test" type="Node2D" index="0"]
+[node name="Test" type="Node2D"]
 
 script = SubResource( 1 )
 
@@ -37,5 +37,6 @@ script = ExtResource( 1 )
 
 position = Vector2( -124.475, -35.148 )
 length = 10
+pathfindingRate = 3
 
 
