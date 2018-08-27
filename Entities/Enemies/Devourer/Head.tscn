@@ -4,6 +4,11 @@
 [ext_resource path="res://Graphics/Sprites/Enemies/Devourer/mouth.png" type="Texture" id=2]
 [ext_resource path="res://Graphics/Sprites/Enemies/Devourer/devourer1.png" type="Texture" id=3]
 
+[sub_resource type="RectangleShape2D" id=3]
+
+custom_solver_bias = 0.0
+extents = Vector2( 12.6921, 6.74464 )
+
 [sub_resource type="Animation" id=1]
 
 resource_name = "MouthAnimation"
@@ -28,17 +33,13 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 12.881, 7.33015 )
 
-[sub_resource type="RectangleShape2D" id=3]
-
-custom_solver_bias = 0.0
-extents = Vector2( 12.6921, 6.74464 )
-
 [node name="DevourerHead" type="Node2D"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 length = 100
-numPositions = 5
+numPositions = 20
+partsSpeed = 10
 path = [  ]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
@@ -49,7 +50,13 @@ collision_mask = 0
 collision/safe_margin = 0.08
 _sections_unfolded = [ "Collision", "Transform" ]
 
-[node name="Mouth" type="Sprite" parent="KinematicBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="0"]
+
+position = Vector2( 0, -8 )
+shape = SubResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Mouth" type="Sprite" parent="KinematicBody2D" index="1"]
 
 position = Vector2( 1.17973, -3.7849 )
 scale = Vector2( 1.34717, 1.306 )
@@ -68,7 +75,7 @@ playback_speed = 1.0
 anims/MouthAnimation = SubResource( 1 )
 blend_times = [  ]
 
-[node name="Head" type="Sprite" parent="KinematicBody2D" index="1"]
+[node name="Head" type="Sprite" parent="KinematicBody2D" index="2"]
 
 texture = ExtResource( 3 )
 vframes = 3
@@ -90,12 +97,6 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 position = Vector2( 0, 6 )
 shape = SubResource( 2 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="2"]
-
-position = Vector2( 0, -8 )
-shape = SubResource( 3 )
-_sections_unfolded = [ "Transform" ]
 
 [connection signal="body_entered" from="KinematicBody2D/Head/Area2D" to="." method="_on_Area2D_body_entered"]
 

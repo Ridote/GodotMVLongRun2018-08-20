@@ -37,16 +37,20 @@ func _physics_process(delta):
 			casting = true
 			if playingAnimation in ["WalkDown", "IddleDown"]:
 				$Sword.position.x = 0
-				$Sword.position.y = 64
+				$Sword.position.y = 32
+				$Sword.rotation = PI
 			elif playingAnimation in ["WalkLeft", "IddleLeft"]:
-				$Sword.position.x = -32
-				$Sword.position.y = 32
+				$Sword.position.x = -64
+				$Sword.position.y = 0
+				$Sword.rotation = PI/2
 			elif playingAnimation in ["WalkRight", "IddleRight"]:
-				$Sword.position.x = 32
-				$Sword.position.y = 32
+				$Sword.position.x = 64
+				$Sword.position.y = 0
+				$Sword.rotation = -PI/2
 			else:
 				$Sword.position.x = 0
-				$Sword.position.y = -32
+				$Sword.position.y = -64
+				$Sword.rotation = -PI
 				
 			
 			

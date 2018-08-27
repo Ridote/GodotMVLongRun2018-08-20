@@ -2,6 +2,8 @@ extends Node2D
 
 export var length = 5
 export var numPositions = 5
+#How fast body parts need to be updated to not break the chain
+export var partsSpeed = 10
 
 var positionManagerScript = preload("res://Entities/Enemies/Devourer/PositionRegister.gd")
 var positionManager = null
@@ -20,7 +22,7 @@ var maxTurn = 0.2
 func _ready():
 	$KinematicBody2D/Mouth/MouthAnimation.get_animation("MouthAnimation").set_loop(true)
 	positionManager = positionManagerScript.new()
-	positionManager.initPositions($KinematicBody2D.global_position, $KinematicBody2D.global_rotation, numPositions)
+	positionManager.initPositions($KinematicBody2D.global_position, $KinematicBody2D.global_rotation, numPositions, partsSpeed)
 	firstBody = bodyClass.instance()
 	firstBody.setBodies(self, null)
 	firstBody.grow(length)

@@ -435,7 +435,6 @@ autostart = false
 
 [node name="Sword" type="Sprite" parent="." index="7"]
 
-editor/display_folded = true
 visible = false
 modulate = Color( 0.078125, 0.078125, 0.078125, 1 )
 position = Vector2( 25.2493, 80 )
