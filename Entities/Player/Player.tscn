@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Sprites/Player/character(whitebeard).png" type="Texture" id=2]
 [ext_resource path="res://Graphics/Textures/light.png" type="Texture" id=3]
+[ext_resource path="res://Sounds/Effects/sword.wav" type="AudioStream" id=4]
 
 [sub_resource type="Animation" id=1]
 
@@ -233,6 +234,11 @@ flags = 4
 gradient = SubResource( 13 )
 width = 5
 
+[sub_resource type="RectangleShape2D" id=16]
+
+custom_solver_bias = 0.0
+extents = Vector2( 30.2317, 31.5661 )
+
 [sub_resource type="Animation" id=15]
 
 resource_name = "Slash"
@@ -274,6 +280,30 @@ tracks/2/keys = {
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("SwordCollision:collision_layer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("SwordCollision:collision_mask")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 4, 0 ]
 }
 
 [node name="Player" type="KinematicBody2D" index="0"]
@@ -405,6 +435,7 @@ autostart = false
 
 [node name="Sword" type="Sprite" parent="." index="7"]
 
+editor/display_folded = true
 visible = false
 modulate = Color( 0.078125, 0.078125, 0.078125, 1 )
 position = Vector2( 25.2493, 80 )
@@ -412,7 +443,27 @@ scale = Vector2( 1.72658, 49.4042 )
 texture = SubResource( 14 )
 _sections_unfolded = [ "Transform", "Visibility" ]
 
-[node name="SwordAnimation" type="AnimationPlayer" parent="Sword" index="0"]
+[node name="SwordCollision" type="Area2D" parent="Sword" index="0"]
+
+position = Vector2( -0.483002, -0.506714 )
+scale = Vector2( 0.0802554, 0.0157187 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sword/SwordCollision" index="0"]
+
+shape = SubResource( 16 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="SwordAnimation" type="AnimationPlayer" parent="Sword" index="1"]
 
 root_node = NodePath("..")
 autoplay = ""
@@ -422,6 +473,21 @@ playback_speed = 1.0
 anims/Slash = SubResource( 15 )
 blend_times = [  ]
 
+[node name="OnHitSound" type="AudioStreamPlayer2D" parent="." index="8"]
+
+stream = ExtResource( 4 )
+volume_db = 0.0
+pitch_scale = 1.0
+autoplay = false
+max_distance = 2000.0
+attenuation = 1.0
+bus = "Master"
+area_mask = 1
+
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_Damaged_timeout"]
+
+[connection signal="timeout" from="Casting" to="." method="_on_Casting_timeout"]
+
+[connection signal="body_entered" from="Sword/SwordCollision" to="." method="_on_SwordCollision_body_entered"]
 
 

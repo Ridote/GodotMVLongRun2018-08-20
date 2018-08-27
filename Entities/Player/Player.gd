@@ -32,9 +32,24 @@ func _physics_process(delta):
 		readInput()
 		move(delta)
 		if skill1:
-			$Casting.wait_time = 2
+			$Casting.wait_time = 0.5
 			$Casting.start()
 			casting = true
+			if playingAnimation in ["WalkDown", "IddleDown"]:
+				$Sword.position.x = 0
+				$Sword.position.y = 64
+			elif playingAnimation in ["WalkLeft", "IddleLeft"]:
+				$Sword.position.x = -32
+				$Sword.position.y = 32
+			elif playingAnimation in ["WalkRight", "IddleRight"]:
+				$Sword.position.x = 32
+				$Sword.position.y = 32
+			else:
+				$Sword.position.x = 0
+				$Sword.position.y = -32
+				
+			
+			
 			$Sword/SwordAnimation.play("Slash")
 	animate(speedDirection)
 
@@ -91,3 +106,11 @@ func _on_Damaged_timeout():
 	$Sprite/DamagedAnimation.play("NotDamaged")
 	#Writting back enemies and enemies projectiles into the collision mask
 	collision_mask |= 12
+
+
+func _on_Casting_timeout():
+	casting = false
+
+
+func _on_SwordCollision_body_entered(body):
+	$OnHitSound.play()
