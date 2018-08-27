@@ -26,6 +26,9 @@ func _ready():
 	$MovementAnimation.get_animation("WalkDown").set_loop(true)
 	$Light2D/LightAnimation.get_animation("LightAttenuation").set_loop(true)
 	$Sprite/DamagedAnimation.get_animation("Damaged").set_loop(true)
+	
+	#PLEASE DELETE ME
+	print("Muévete con WASD. Ataca con Q y no te olvides de pinchar con el ratón sobre el juego para que haga focus sobre la pantalla y puedas usar las teclas.")
 
 func _physics_process(delta):
 	if !casting:

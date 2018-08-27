@@ -5,7 +5,7 @@
 [ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Enemies/Devourer/Head.tscn" type="PackedScene" id=4]
 
-[node name="Test" type="Node2D"]
+[node name="Test" type="Node2D" index="0"]
 
 [node name="Navigation2D" type="Navigation2D" parent="." index="0"]
 
@@ -19,6 +19,5 @@ script = ExtResource( 1 )
 
 position = Vector2( -124.475, -35.148 )
 length = 10
-partsSpeed = 10
 
 
