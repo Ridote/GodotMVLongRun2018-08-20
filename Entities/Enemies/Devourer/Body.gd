@@ -1,4 +1,4 @@
-extends Area2D
+extends "res://Entities/Enemies/Enemy.gd"
 
 var previous = null
 var next = null
@@ -28,12 +28,15 @@ func update():
 
 func set_body(body = true):
 	if body:
-		$Sprite.frame = 1
+		$BodyArea2D/Sprite.frame = 1
 	else:
-		$Sprite.frame = 2
+		$BodyArea2D/Sprite.frame = 2
 func grow(length):
 	next = self.duplicate()
 	add_child(next)
 	next.setBodies(self, null)
 	if length > 0:
 		next.grow(length-1)
+
+func _on_BodyArea2D_body_entered(body):
+	body.receiveDamage(1,1)

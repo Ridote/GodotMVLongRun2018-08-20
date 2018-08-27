@@ -120,4 +120,5 @@ func _on_Casting_timeout():
 
 
 func _on_SwordCollision_body_entered(body):
+	body.get_parent().receiveDamage(2,0)
 	$OnHitSound.play()

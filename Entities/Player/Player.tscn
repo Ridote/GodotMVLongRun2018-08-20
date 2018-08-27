@@ -234,14 +234,13 @@ flags = 4
 gradient = SubResource( 13 )
 width = 5
 
-[sub_resource type="RectangleShape2D" id=16]
+[sub_resource type="RectangleShape2D" id=15]
 
 custom_solver_bias = 0.0
 extents = Vector2( 30.2317, 31.5661 )
 
-[sub_resource type="Animation" id=15]
+[sub_resource type="Animation" id=16]
 
-resource_name = "Slash"
 length = 0.4
 loop = false
 step = 0.1
@@ -303,10 +302,10 @@ tracks/4/keys = {
 "times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 4, 0 ]
+"values": [ 12, 0 ]
 }
 
-[node name="Player" type="KinematicBody2D" index="0"]
+[node name="Player" type="KinematicBody2D"]
 
 input_pickable = false
 collision_layer = 1
@@ -459,7 +458,7 @@ _sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sword/SwordCollision" index="0"]
 
-shape = SubResource( 16 )
+shape = SubResource( 15 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="SwordAnimation" type="AnimationPlayer" parent="Sword" index="1"]
@@ -469,7 +468,7 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Slash = SubResource( 15 )
+anims/Slash = SubResource( 16 )
 blend_times = [  ]
 
 [node name="OnHitSound" type="AudioStreamPlayer2D" parent="." index="8"]

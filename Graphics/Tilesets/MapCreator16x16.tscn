@@ -1,23 +1,24 @@
-[gd_scene load_steps=34 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://Graphics/Tilesets/wood_tileset.png" type="Texture" id=1]
 
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 16, 16 )
-
-[sub_resource type="NavigationPolygon" id=2]
+[sub_resource type="NavigationPolygon" id=1]
 
 vertices = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 ) ]
 
-[sub_resource type="NavigationPolygon" id=3]
+[sub_resource type="NavigationPolygon" id=2]
 
 vertices = PoolVector2Array( -16, -16, 16, -16, 16, 16, -16, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -16, 16, 16, 16, 16, -16, -16, -16 ) ]
+
+[sub_resource type="NavigationPolygon" id=3]
+
+vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
 
 [sub_resource type="NavigationPolygon" id=4]
 
@@ -63,15 +64,15 @@ outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
 
 [sub_resource type="NavigationPolygon" id=11]
 
-vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
-
-[sub_resource type="NavigationPolygon" id=12]
-
 vertices = PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -16, 16, -16, -16, 16, -16, 16, 16 ) ]
+
+[sub_resource type="NavigationPolygon" id=12]
+
+vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
 
 [sub_resource type="NavigationPolygon" id=13]
 
@@ -109,11 +110,10 @@ vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
 
-[sub_resource type="NavigationPolygon" id=19]
+[sub_resource type="RectangleShape2D" id=19]
 
-vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
-polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
-outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
+custom_solver_bias = 0.0
+extents = Vector2( 16, 16 )
 
 [sub_resource type="NavigationPolygon" id=20]
 
@@ -193,7 +193,12 @@ vertices = PoolVector2Array( 16, -16, 16, 16, -16, 16, -16, -16 )
 polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
 outlines = [ PoolVector2Array( -16, -16, -16, 16, 16, 16, 16, -16 ) ]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=33]
+
+custom_solver_bias = 0.0
+extents = Vector2( 23, 13 )
+
+[node name="Node2D" type="Node2D" index="0"]
 
 [node name="Grass0" type="Sprite" parent="." index="0"]
 
@@ -203,23 +208,9 @@ vframes = 16
 hframes = 16
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass0" index="0"]
+[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Grass0" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass0/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance2" type="NavigationPolygonInstance" parent="Grass0" index="1"]
-
-navpoly = SubResource( 2 )
+navpoly = SubResource( 1 )
 enabled = true
 
 [node name="Grass1" type="Sprite" parent="." index="1"]
@@ -232,23 +223,9 @@ hframes = 16
 frame = 1
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass1" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass1" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass1/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass1" index="1"]
-
-navpoly = SubResource( 3 )
+navpoly = SubResource( 2 )
 enabled = true
 
 [node name="Grass2" type="Sprite" parent="." index="2"]
@@ -261,23 +238,9 @@ hframes = 16
 frame = 2
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass2" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass2" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass2/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass2" index="1"]
-
-navpoly = SubResource( 4 )
+navpoly = SubResource( 3 )
 enabled = true
 
 [node name="Grass3" type="Sprite" parent="." index="3"]
@@ -290,23 +253,9 @@ hframes = 16
 frame = 3
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass3" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass3" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass3/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass3" index="1"]
-
-navpoly = SubResource( 5 )
+navpoly = SubResource( 4 )
 enabled = true
 
 [node name="Grass4" type="Sprite" parent="." index="4"]
@@ -319,23 +268,9 @@ hframes = 16
 frame = 4
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass4" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass4" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass4/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass4" index="1"]
-
-navpoly = SubResource( 6 )
+navpoly = SubResource( 5 )
 enabled = true
 
 [node name="GrassWaterTopLeft" type="Sprite" parent="." index="5"]
@@ -424,23 +359,9 @@ hframes = 16
 frame = 8
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass5" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass5" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass5/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass5" index="1"]
-
-navpoly = SubResource( 7 )
+navpoly = SubResource( 6 )
 enabled = true
 
 [node name="GrassCobblestone00" type="Sprite" parent="." index="9"]
@@ -453,23 +374,9 @@ hframes = 16
 frame = 9
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="GrassCobblestone00" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone00" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassCobblestone00/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone00" index="1"]
-
-navpoly = SubResource( 8 )
+navpoly = SubResource( 7 )
 enabled = true
 
 [node name="Cobblestone0" type="Sprite" parent="." index="10"]
@@ -482,23 +389,9 @@ hframes = 16
 frame = 10
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cobblestone0" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Cobblestone0" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cobblestone0/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Cobblestone0" index="1"]
-
-navpoly = SubResource( 9 )
+navpoly = SubResource( 8 )
 enabled = true
 
 [node name="Cobblestone1" type="Sprite" parent="." index="11"]
@@ -511,23 +404,9 @@ hframes = 16
 frame = 11
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cobblestone1" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Cobblestone1" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cobblestone1/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Cobblestone1" index="1"]
-
-navpoly = SubResource( 10 )
+navpoly = SubResource( 9 )
 enabled = true
 
 [node name="GrassCobblestone10" type="Sprite" parent="." index="12"]
@@ -540,23 +419,9 @@ hframes = 16
 frame = 12
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="GrassCobblestone10" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone10" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassCobblestone10/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone10" index="1"]
-
-navpoly = SubResource( 11 )
+navpoly = SubResource( 10 )
 enabled = true
 
 [node name="Grass8" type="Sprite" parent="." index="13"]
@@ -569,23 +434,9 @@ hframes = 16
 frame = 13
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass8" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass8" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass8/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass8" index="1"]
-
-navpoly = SubResource( 12 )
+navpoly = SubResource( 11 )
 enabled = true
 
 [node name="Grass9" type="Sprite" parent="." index="14"]
@@ -598,23 +449,9 @@ hframes = 16
 frame = 14
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass9" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass9" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass9/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass9" index="1"]
-
-navpoly = SubResource( 13 )
+navpoly = SubResource( 12 )
 enabled = true
 
 [node name="Grass10" type="Sprite" parent="." index="15"]
@@ -627,23 +464,9 @@ hframes = 16
 frame = 15
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass10" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass10" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass10/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass10" index="1"]
-
-navpoly = SubResource( 14 )
+navpoly = SubResource( 13 )
 enabled = true
 
 [node name="Grass11" type="Sprite" parent="." index="16"]
@@ -656,23 +479,9 @@ hframes = 16
 frame = 16
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass11" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass11" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass11/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass11" index="1"]
-
-navpoly = SubResource( 15 )
+navpoly = SubResource( 14 )
 enabled = true
 
 [node name="Grass12" type="Sprite" parent="." index="17"]
@@ -685,23 +494,9 @@ hframes = 16
 frame = 17
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass12" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass12" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass12/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass12" index="1"]
-
-navpoly = SubResource( 16 )
+navpoly = SubResource( 15 )
 enabled = true
 
 [node name="Grass13" type="Sprite" parent="." index="18"]
@@ -714,23 +509,9 @@ hframes = 16
 frame = 18
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass13" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass13" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass13/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass13" index="1"]
-
-navpoly = SubResource( 17 )
+navpoly = SubResource( 16 )
 enabled = true
 
 [node name="Grass14" type="Sprite" parent="." index="19"]
@@ -743,23 +524,9 @@ hframes = 16
 frame = 19
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass14" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass14" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass14/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass14" index="1"]
-
-navpoly = SubResource( 18 )
+navpoly = SubResource( 17 )
 enabled = true
 
 [node name="Grass15" type="Sprite" parent="." index="20"]
@@ -772,23 +539,9 @@ hframes = 16
 frame = 20
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass15" index="0"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass15" index="0"]
 
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass15/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass15" index="1"]
-
-navpoly = SubResource( 19 )
+navpoly = SubResource( 18 )
 enabled = true
 
 [node name="GrassWaterLeft" type="Sprite" parent="." index="21"]
@@ -838,7 +591,7 @@ bounce = 0.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrassWaterCenter/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
+shape = SubResource( 19 )
 
 [node name="GrassWaterRight" type="Sprite" parent="." index="23"]
 
@@ -876,21 +629,7 @@ hframes = 16
 frame = 24
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass16" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass16/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass16" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass16" index="0"]
 
 navpoly = SubResource( 20 )
 enabled = true
@@ -905,21 +644,7 @@ hframes = 16
 frame = 25
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="GrassCobblestone01" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassCobblestone01/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone01" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone01" index="0"]
 
 navpoly = SubResource( 21 )
 enabled = true
@@ -934,21 +659,7 @@ hframes = 16
 frame = 26
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cobblestone2" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cobblestone2/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Cobblestone2" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Cobblestone2" index="0"]
 
 navpoly = SubResource( 22 )
 enabled = true
@@ -963,21 +674,7 @@ hframes = 16
 frame = 27
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Cobblestone3" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Cobblestone3/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Cobblestone3" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Cobblestone3" index="0"]
 
 navpoly = SubResource( 23 )
 enabled = true
@@ -992,21 +689,7 @@ hframes = 16
 frame = 28
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="GrassCobblestone11" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassCobblestone11/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone11" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="GrassCobblestone11" index="0"]
 
 navpoly = SubResource( 24 )
 enabled = true
@@ -1021,21 +704,7 @@ hframes = 16
 frame = 29
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass17" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass17/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass17" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass17" index="0"]
 
 navpoly = SubResource( 25 )
 enabled = true
@@ -1050,21 +719,7 @@ hframes = 16
 frame = 30
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass18" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass18/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass18" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass18" index="0"]
 
 navpoly = SubResource( 26 )
 enabled = true
@@ -1079,21 +734,7 @@ hframes = 16
 frame = 31
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass19" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass19/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass19" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass19" index="0"]
 
 navpoly = SubResource( 27 )
 enabled = true
@@ -1108,21 +749,7 @@ hframes = 16
 frame = 32
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass20" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass20/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass20" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass20" index="0"]
 
 navpoly = SubResource( 28 )
 enabled = true
@@ -1137,21 +764,7 @@ hframes = 16
 frame = 33
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass21" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass21/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass21" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass21" index="0"]
 
 navpoly = SubResource( 29 )
 enabled = true
@@ -1166,21 +779,7 @@ hframes = 16
 frame = 34
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass22" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass22/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass22" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass22" index="0"]
 
 navpoly = SubResource( 30 )
 enabled = true
@@ -1195,21 +794,7 @@ hframes = 16
 frame = 35
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass23" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass23/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass23" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass23" index="0"]
 
 navpoly = SubResource( 31 )
 enabled = true
@@ -1224,21 +809,7 @@ hframes = 16
 frame = 36
 _sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Grass24" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Grass24/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass24" index="1"]
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Grass24" index="0"]
 
 navpoly = SubResource( 32 )
 enabled = true
@@ -1318,17 +889,51 @@ bounce = 0.0
 build_mode = 0
 polygon = PoolVector2Array( -16, -16, -16, -3, -1, -16 )
 
-[node name="TreeLeafsTopLeft" type="Sprite" parent="." index="40"]
+[node name="Tree" type="Sprite" parent="." index="40"]
+
+position = Vector2( 48, 128 )
+texture = ExtResource( 1 )
+vframes = 4
+hframes = 4
+frame = 15
+region_enabled = true
+region_rect = Rect2( 384, 384, 128, 96 )
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
+
+[node name="TreeTrunk" type="Sprite" parent="." index="41"]
+
+position = Vector2( 48, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 4
+frame = 63
+_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TreeTrunk" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeTrunk/StaticBody2D" index="0"]
+
+position = Vector2( 0, -3 )
+shape = SubResource( 33 )
+
+[node name="GrassNoNavMap" type="Sprite" parent="." index="42"]
 
 editor/display_folded = true
-position = Vector2( 0, 96 )
+position = Vector2( 160, 96 )
 texture = ExtResource( 1 )
 vframes = 16
 hframes = 16
-frame = 204
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
+_sections_unfolded = [ "Animation", "Offset", "Region", "Transform" ]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsTopLeft" index="0"]
+[node name="StaticBody2D" type="StaticBody2D" parent="GrassNoNavMap" index="0"]
 
 input_pickable = false
 collision_layer = 1
@@ -1338,378 +943,8 @@ constant_angular_velocity = 0.0
 friction = 1.0
 bounce = 0.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsTopLeft/StaticBody2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrassNoNavMap/StaticBody2D" index="0"]
 
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsTopLeft" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsTopMidL" type="Sprite" parent="." index="41"]
-
-editor/display_folded = true
-position = Vector2( 32, 96 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 205
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsTopMidL" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsTopMidL/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsTopMidL" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsTopMidR" type="Sprite" parent="." index="42"]
-
-editor/display_folded = true
-position = Vector2( 64, 96 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 206
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsTopMidR" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsTopMidR/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsTopMidR" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsTopRight" type="Sprite" parent="." index="43"]
-
-editor/display_folded = true
-position = Vector2( 96, 96 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 207
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsTopRight" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsTopRight/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsTopRight" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsMidLeft" type="Sprite" parent="." index="44"]
-
-editor/display_folded = true
-position = Vector2( 0, 128 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 220
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsMidLeft" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsMidLeft/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsMidLeft" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsMidMidL" type="Sprite" parent="." index="45"]
-
-editor/display_folded = true
-position = Vector2( 32, 128 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 221
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsMidMidL" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsMidMidL/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsMidMidL" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsMidMidR" type="Sprite" parent="." index="46"]
-
-editor/display_folded = true
-position = Vector2( 64, 128 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 222
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsMidMidR" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsMidMidR/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsMidMidR" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsMidRight" type="Sprite" parent="." index="47"]
-
-editor/display_folded = true
-position = Vector2( 96, 128 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 223
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsMidRight" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsMidRight/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsMidRight" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsBotLeft" type="Sprite" parent="." index="48"]
-
-editor/display_folded = true
-position = Vector2( 0, 160 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 236
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsBotLeft" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsBotLeft/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsBotLeft" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsBotMidL" type="Sprite" parent="." index="49"]
-
-editor/display_folded = true
-position = Vector2( 32, 160 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 237
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsBotMidL" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsBotMidL/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsBotMidL" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsBotMidR" type="Sprite" parent="." index="50"]
-
-editor/display_folded = true
-position = Vector2( 64, 160 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 238
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsBotMidR" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsBotMidR/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsBotMidR" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeLeafsBotRight" type="Sprite" parent="." index="51"]
-
-editor/display_folded = true
-position = Vector2( 96, 160 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 239
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeLeafsBotRight" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeLeafsBotRight/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="TreeLeafsBotRight" index="1"]
-
-navpoly = SubResource( 17 )
-enabled = true
-
-[node name="TreeTrunkLeft" type="Sprite" parent="." index="52"]
-
-position = Vector2( 32, 192 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 253
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeTrunkLeft" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeTrunkLeft/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="TreeTrunkRight" type="Sprite" parent="." index="53"]
-
-position = Vector2( 64, 192 )
-texture = ExtResource( 1 )
-vframes = 16
-hframes = 16
-frame = 254
-_sections_unfolded = [ "Animation", "Offset", "Transform" ]
-
-[node name="StaticBody2D" type="StaticBody2D" parent="TreeTrunkRight" index="0"]
-
-input_pickable = false
-collision_layer = 1
-collision_mask = 1
-constant_linear_velocity = Vector2( 0, 0 )
-constant_angular_velocity = 0.0
-friction = 1.0
-bounce = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeTrunkRight/StaticBody2D" index="0"]
-
-shape = SubResource( 1 )
+shape = SubResource( 19 )
 
 

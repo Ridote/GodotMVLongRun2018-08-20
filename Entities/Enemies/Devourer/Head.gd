@@ -1,4 +1,4 @@
-extends Node2D
+extends "res://Entities/Enemies/Enemy.gd"
 
 export var length = 5
 export var numPositions = 5
