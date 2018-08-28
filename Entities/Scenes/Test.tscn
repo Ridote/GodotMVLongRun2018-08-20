@@ -15,7 +15,7 @@ script = ExtResource( 1 )
 [node name="PlayerF" parent="." index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 910.89, 929.648 )
-maxSpeed = 300
-acceleration = 400
+maxSpeed = 200
+acceleration = 500
 
 

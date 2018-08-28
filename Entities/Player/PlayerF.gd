@@ -1,7 +1,7 @@
 extends Node2D
 
-export var maxSpeed = 300
-export var acceleration = 400
+export var maxSpeed = 200
+export var acceleration = 500
 
 var skill1 = null
 var skill2 = null
@@ -45,10 +45,10 @@ func move(delta):
 		moveDirection.y = 1
 	else:
 		$Rigid.linear_velocity.y /= 2
-	$Rigid.apply_impulse(Vector2(0,0), moveDirection*delta*acceleration)
+	$Rigid.apply_impulse(Vector2(0,0), moveDirection.normalized()*delta*acceleration)
+	
 	
 	var linVel = $Rigid.linear_velocity
-	
 	#Clamp to max speed
 	if((abs(linVel.x) + abs(linVel.y))> maxSpeed):
-		$Rigid.set_linear_velocity(linVel.normalized()*maxSpeed*delta)
+		$Rigid.set_linear_velocity(moveDirection.normalized()*maxSpeed)
