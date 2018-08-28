@@ -36,9 +36,9 @@ extents = Vector2( 12.881, 7.33015 )
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
-length = 100
-numPositions = 20
-partsSpeed = 10
+length = 10
+numPositions = 10
+partsSpeed = 2
 path = [  ]
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]

@@ -1,5 +1,7 @@
 extends "res://Entities/Enemies/Enemy.gd"
 
+var BodyScene = preload("res://Entities/Enemies/Devourer/Body.tscn")
+
 var previous = null
 var next = null
 var positionManagerScript = preload("res://Entities/Enemies/Devourer/PositionRegister.gd")
@@ -32,11 +34,12 @@ func set_body(body = true):
 	else:
 		$BodyArea2D/Sprite.frame = 2
 func grow(length):
-	next = self.duplicate()
+	
+	next = BodyScene.instance()
 	add_child(next)
 	next.setBodies(self, null)
 	if length > 0:
 		next.grow(length-1)
 
 func _on_BodyArea2D_body_entered(body):
-	body.receiveDamage(1,1)
+	body.get_parent().receiveDamage(1,1)
