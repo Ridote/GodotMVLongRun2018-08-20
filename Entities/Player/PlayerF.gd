@@ -16,7 +16,11 @@ var moveLeft = null
 var moveUp = null
 var moveDown = null
 
+#Control
 var damaged = false
+enum DIRECTION {UP, DOWN, LEFT, RIGHT}
+var desiredDirection = DIRECTION.DOWN
+var lastAnimation = null
 
 func _ready():
 	pass
@@ -24,7 +28,8 @@ func _ready():
 func _physics_process(delta):
 	readInput()
 	move(delta)
-
+	animate()
+	
 func readInput():
 	skill1 = Input.is_action_pressed("Skill1")
 	skill2 = Input.is_action_pressed("Skill2")
@@ -52,11 +57,64 @@ func move(delta):
 		$Rigid.linear_velocity.y /= 2
 	$Rigid.apply_impulse(Vector2(0,0), moveDirection.normalized()*delta*acceleration)
 	
+	#Get the direction we want to move to update the sprite despite of the real velocity
+	if (abs(moveDirection.x) - abs(moveDirection.y)) > 0.1:
+		if moveDirection.x > 0.1:
+			desiredDirection = DIRECTION.RIGHT
+		elif moveDirection.x < -0.1:
+			desiredDirection = DIRECTION.LEFT
+	elif (abs(moveDirection.y) - abs(moveDirection.x)) > 0.1:
+		if moveDirection.y < -0.1:
+			desiredDirection = DIRECTION.UP
+		elif moveDirection.y > 0.1:
+			desiredDirection = DIRECTION.DOWN
 	
-	var linVel = $Rigid.linear_velocity
 	#Clamp to max speed
+	var linVel = $Rigid.linear_velocity
 	if((abs(linVel.x) + abs(linVel.y))> maxSpeed):
 		$Rigid.set_linear_velocity(moveDirection.normalized()*maxSpeed)
+
+func animate():
+	#if we are moving fast, we are running
+	if (abs($Rigid.linear_velocity.x) > 0.1) or (abs($Rigid.linear_velocity.y) > 0.1):
+		match desiredDirection:
+			DIRECTION.UP:
+				if lastAnimation != "RunningUp":
+					$Rigid/Sprite/AnimationPlayer.play("RunningUp")
+					lastAnimation = "RunningUp"
+			DIRECTION.DOWN:
+				if lastAnimation != "RunningDown":
+					$Rigid/Sprite/AnimationPlayer.play("RunningDown")
+					lastAnimation = "RunningDown"
+			DIRECTION.LEFT:
+				if lastAnimation != "RunningLeft":
+					$Rigid/Sprite/AnimationPlayer.play("RunningLeft")
+					lastAnimation = "RunningLeft"
+			DIRECTION.RIGHT:
+				if lastAnimation != "RunningRight":
+					$Rigid/Sprite/AnimationPlayer.play("RunningRight")
+					lastAnimation = "RunningRight"
+			_:
+				print("Unknown error on player animate")
+				error()
+	#if not, we are idle
+	else:
+		match desiredDirection:
+			DIRECTION.UP:
+				$Rigid/Sprite/AnimationPlayer.play("IdleUp")
+				lastAnimation = "IdleUp"
+			DIRECTION.DOWN:
+				$Rigid/Sprite/AnimationPlayer.play("IdleDown")
+				lastAnimation = "IdleDown"
+			DIRECTION.LEFT:
+				$Rigid/Sprite/AnimationPlayer.play("IdleLeft")
+				lastAnimation = "IdleLeft"
+			DIRECTION.RIGHT:
+				$Rigid/Sprite/AnimationPlayer.play("IdleRight")
+				lastAnimation = "IdleRight"
+			_:
+				print("Unknown error on player animate")
+				error()
 
 func receiveDamage(fis, mag):
 	if !damaged:
