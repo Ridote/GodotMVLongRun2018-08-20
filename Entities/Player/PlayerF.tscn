@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Entities/Player/PlayerF.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Sprites/link.png" type="Texture" id=2]
@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8, 12 )
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=2]
 
 resource_name = "IdleDown"
 length = 0.1
@@ -39,9 +39,8 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "IdleLeft"
 length = 0.1
 loop = false
 step = 0.1
@@ -70,9 +69,8 @@ tracks/1/keys = {
 "values": [ Vector2( -1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=4]
 
-resource_name = "IdleRight"
 length = 0.1
 loop = false
 step = 0.1
@@ -132,7 +130,7 @@ tracks/1/keys = {
 "values": [ Vector2( 1, 1 ) ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=6]
 
 resource_name = "RunningDown"
 length = 0.8
@@ -163,9 +161,8 @@ tracks/1/keys = {
 "values": [ Rect2( 1, 3, 16, 24 ), Rect2( 19, 3, 16, 24 ), Rect2( 36, 3, 16, 24 ), Rect2( 53, 1, 16, 24 ), Rect2( 70, 3, 16, 24 ), Rect2( 87, 3, 16, 24 ), Rect2( 104, 2, 16, 24 ), Rect2( 121, 2, 16, 24 ), Rect2( 138, 3, 16, 24 ) ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=7]
 
-resource_name = "RunningLeft"
 length = 0.8
 loop = true
 step = 0.1
@@ -194,9 +191,8 @@ tracks/1/keys = {
 "values": [ Rect2( 1, 58, 16, 24 ), Rect2( 20, 58, 16, 24 ), Rect2( 38, 58, 16, 24 ), Rect2( 56, 58, 16, 24 ), Rect2( 73, 58, 16, 24 ), Rect2( 91, 58, 16, 24 ), Rect2( 109, 58, 16, 24 ), Rect2( 126, 58, 16, 24 ), Rect2( 144, 58, 16, 24 ) ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=8]
 
-resource_name = "RunningRight"
 length = 0.8
 loop = true
 step = 0.1
@@ -256,6 +252,73 @@ tracks/1/keys = {
 "values": [ Rect2( 1, 111, 16, 24 ), Rect2( 19, 111, 16, 24 ), Rect2( 36, 111, 16, 24 ), Rect2( 53, 110, 16, 24 ), Rect2( 70, 111, 16, 24 ), Rect2( 87, 111, 16, 24 ), Rect2( 104, 111, 16, 24 ), Rect2( 121, 110, 16, 24 ), Rect2( 138, 111, 16, 24 ) ]
 }
 
+[sub_resource type="Animation" id=10]
+
+resource_name = "DashDown"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 180.0 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath(".:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ Vector2( 0, 19 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath(".:collision_layer")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 2, 0 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath(".:collision_mask")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 30, 0 ]
+}
+
 [node name="PlayerF" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
@@ -291,6 +354,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Rigid" index="1"]
 
+editor/display_folded = true
 texture = ExtResource( 2 )
 vframes = 21
 hframes = 13
@@ -305,13 +369,13 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/IdleDown = SubResource( 4 )
-anims/IdleLeft = SubResource( 2 )
-anims/IdleRight = SubResource( 3 )
+anims/IdleDown = SubResource( 2 )
+anims/IdleLeft = SubResource( 3 )
+anims/IdleRight = SubResource( 4 )
 anims/IdleUp = SubResource( 5 )
-anims/RunningDown = SubResource( 8 )
-anims/RunningLeft = SubResource( 6 )
-anims/RunningRight = SubResource( 7 )
+anims/RunningDown = SubResource( 6 )
+anims/RunningLeft = SubResource( 7 )
+anims/RunningRight = SubResource( 8 )
 anims/RunningUp = SubResource( 9 )
 blend_times = [  ]
 
@@ -340,6 +404,44 @@ editor_draw_screen = true
 editor_draw_limits = false
 editor_draw_drag_margin = false
 
+[node name="Sword" type="Area2D" parent="Rigid" index="3"]
+
+visible = false
+position = Vector2( 0, 19 )
+rotation = -3.14159
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+collision_mask = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+
+[node name="Sprite" type="Sprite" parent="Rigid/Sword" index="0"]
+
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 2, 271, 6, 14 )
+_sections_unfolded = [ "Region" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rigid/Sword" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( 1.99269, 7.00208, 2.0073, -6.99791, -1.99269, -7.00208, -2.0073, 6.99791 )
+
+[node name="SwordAnimation" type="AnimationPlayer" parent="Rigid/Sword" index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/DashDown = SubResource( 10 )
+blend_times = [  ]
+
 [node name="DamagedTimer" type="Timer" parent="." index="1"]
 
 process_mode = 1
@@ -347,6 +449,15 @@ wait_time = 1.0
 one_shot = false
 autostart = false
 
+[node name="Casting" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_DamagedTimer_timeout"]
+
+[connection signal="timeout" from="Casting" to="." method="_on_Casting_timeout"]
 
 

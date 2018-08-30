@@ -32,7 +32,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 12.881, 7.33015 )
 
-[node name="DevourerHead" type="Node2D"]
+[node name="DevourerHead" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -98,6 +98,15 @@ _sections_unfolded = [ "Collision", "Transform" ]
 position = Vector2( 0, 6 )
 shape = SubResource( 3 )
 
+[node name="Reroute" type="Timer" parent="." index="1"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
 [connection signal="body_entered" from="KinematicBody2D/Head/Area2D" to="." method="_on_Area2D_body_entered"]
+
+[connection signal="timeout" from="Reroute" to="." method="_on_Reroute_timeout"]
 
 

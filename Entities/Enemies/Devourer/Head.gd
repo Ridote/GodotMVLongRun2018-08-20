@@ -18,6 +18,7 @@ var speed = 150
 var turn = 0.01
 var maxTurn = 0.2
 
+var player = null
 
 func _ready():
 	$KinematicBody2D/Mouth/MouthAnimation.get_animation("MouthAnimation").set_loop(true)
@@ -27,6 +28,10 @@ func _ready():
 	firstBody.setBodies(self, null)
 	firstBody.grow(length)
 	add_child(firstBody)
+	
+	if(self.get_parent().get_node("Player") != null):
+		player = self.get_parent().get_node("Player").get_node("Rigid")
+		$Reroute.start()
 
 func _physics_process(delta):
 	if path.size() > 0:
@@ -36,8 +41,8 @@ func _physics_process(delta):
 		if $KinematicBody2D.global_position.distance_to(path[0]) < 2:
 			path.remove(0)
 	else:
-		if self.get_parent().get_node("Player").get_node("Rigid"):
-			path = self.get_parent().update_path($KinematicBody2D/Mouth, self.get_parent().get_node("Player").get_node("Rigid"))
+		if player:
+			path = self.get_parent().update_path($KinematicBody2D/Mouth, player)
 	
 	var speedDirection = Vector2(sin($KinematicBody2D.rotation), -cos($KinematicBody2D.rotation)).normalized()
 	var collision = $KinematicBody2D.move_and_collide(speedDirection*speed*delta)
@@ -50,3 +55,7 @@ func _physics_process(delta):
 
 func _on_Area2D_body_entered(body):
 	body.get_parent().receiveDamage(1,1)
+
+func _on_Reroute_timeout():
+	path = self.get_parent().update_path($KinematicBody2D/Mouth, player)
+	$Reroute.start()

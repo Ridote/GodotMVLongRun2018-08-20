@@ -18,18 +18,25 @@ var moveDown = null
 
 #Control
 var damaged = false
+var casting = false
+
 enum DIRECTION {UP, DOWN, LEFT, RIGHT}
 var desiredDirection = DIRECTION.DOWN
 var lastAnimation = null
+
 
 func _ready():
 	pass
 
 func _physics_process(delta):
-	readInput()
-	move(delta)
+	if !casting:
+		readInput()
+		move(delta)
+		processSkills()
+	else:
+		$Rigid.linear_velocity = Vector2(0,0)
 	animate()
-	
+
 func readInput():
 	skill1 = Input.is_action_pressed("Skill1")
 	skill2 = Input.is_action_pressed("Skill2")
@@ -116,6 +123,14 @@ func animate():
 				print("Unknown error on player animate")
 				error()
 
+func processSkills():
+	if skill1:
+		$Rigid/Sword/SwordAnimation.play("DashDown")
+		casting = true
+		$Casting.wait_time = 0.5
+		$Casting.start()
+		return
+
 func receiveDamage(fis, mag):
 	if !damaged:
 		damaged = true
@@ -130,3 +145,7 @@ func _on_DamagedTimer_timeout():
 	#$Sprite/DamagedAnimation.play("NotDamaged")
 	#Writting back enemies and enemies projectiles into the collision mask
 	$Rigid.collision_mask |= 12
+
+
+func _on_Casting_timeout():
+	casting = false
