@@ -1,6 +1,7 @@
 extends Navigation2D
 
 
+
 func update_path():
 	var start = $DevourerHead.position
 	var end = $Player.position

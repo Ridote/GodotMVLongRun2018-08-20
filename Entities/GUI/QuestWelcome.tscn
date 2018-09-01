@@ -28,7 +28,6 @@ margin_top = -202.0
 margin_right = 216.0
 margin_bottom = 202.0
 script = ExtResource( 3 )
-_sections_unfolded = [ "Axis Stretch", "Visibility" ]
 
 [node name="OK" parent="Window" index="0" instance=ExtResource( 4 )]
 
