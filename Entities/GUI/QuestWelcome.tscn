@@ -1,0 +1,127 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Entities/GUI/QuestWelcome.gd" type="Script" id=1]
+[ext_resource path="res://Entities/GUI/Elements/Window.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Entities/GUI/Elements/Window.gd" type="Script" id=3]
+[ext_resource path="res://Entities/GUI/Elements/ButtonRed.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/GUI/Elements/TextBox.tscn" type="PackedScene" id=5]
+
+[node name="QuestWelcome" type="CanvasLayer" index="0"]
+
+layer = 1
+offset = Vector2( 0, 0 )
+rotation = 0.0
+scale = Vector2( 1, 1 )
+transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Grow Direction" ]
+
+[node name="Window" parent="." index="0" instance=ExtResource( 2 )]
+
+show_behind_parent = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -217.0
+margin_top = -202.0
+margin_right = 216.0
+margin_bottom = 202.0
+script = ExtResource( 3 )
+_sections_unfolded = [ "Axis Stretch", "Visibility" ]
+
+[node name="OK" parent="Window" index="0" instance=ExtResource( 4 )]
+
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -70.5
+margin_top = -74.0
+margin_right = 60.5
+margin_bottom = -47.0
+_sections_unfolded = [ "Margin" ]
+
+[node name="Label" type="Label" parent="Window/OK" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Let's go!"
+align = 1
+valign = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="TextBox" parent="Window" index="1" instance=ExtResource( 5 )]
+
+editor/display_folded = true
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -135.5
+margin_top = -91.0
+margin_right = 135.5
+margin_bottom = 91.0
+
+[node name="Label" type="Label" parent="Window/TextBox" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = 10.0
+margin_right = -10.0
+margin_bottom = -10.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "This is a game about becoming an extraordinary person in a dangerous world. You’ll explore wondrous places, meet fascinating and mysterious people, witness magical events, and answer the call to go on an exciting adventure. What happens in this world is based on the choices you and your friends make.
+
+"
+align = 1
+autowrap = true
+clip_text = true
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "Margin" ]
+
+[node name="Exit" type="LinkButton" parent="Window" index="2"]
+
+anchor_left = 1.0
+anchor_top = 0.0
+anchor_right = 1.0
+anchor_bottom = 0.0
+margin_left = -21.0
+margin_bottom = 21.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+
+[connection signal="pressed" from="Window/OK" to="Window" method="close"]
+
+[connection signal="pressed" from="Window/Exit" to="Window" method="close"]
+
+
