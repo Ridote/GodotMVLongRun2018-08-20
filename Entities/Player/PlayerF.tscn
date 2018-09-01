@@ -1,7 +1,8 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://Entities/Player/PlayerF.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/link.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Sprites/link_alpha.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Sprites/link.png" type="Texture" id=3]
 
 [sub_resource type="CapsuleShape2D" id=1]
 
@@ -320,7 +321,7 @@ tracks/4/keys = {
 "values": [ 30, 0 ]
 }
 
-[node name="PlayerF" type="Node2D"]
+[node name="PlayerF" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 maxSpeed = 200
@@ -423,7 +424,7 @@ _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Rigid/Sword" index="0"]
 
-texture = ExtResource( 2 )
+texture = ExtResource( 3 )
 region_enabled = true
 region_rect = Rect2( 2, 271, 6, 14 )
 _sections_unfolded = [ "Region" ]
