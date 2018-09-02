@@ -101,12 +101,14 @@ func animate(speedDirection):
 
 func receiveDamage(fis, mag):
 	if !damaged:
+		print("got damage")
 		damaged = true
 		$Sprite/DamagedAnimation.play("Damaged")
 		#Removing enemies and enemies projectiles from the collision mask
 		collision_mask &= ~12
 		$DamagedTimer.set_wait_time(dmgInvulnTime)
 		$DamagedTimer.start()
+		state.player_hp -= fis
 
 func _on_Damaged_timeout():
 	damaged = false

@@ -48,13 +48,13 @@ func _physics_process(delta):
 	var collision = $KinematicBody2D.move_and_collide(speedDirection*speed*delta)
 	if collision != null:
 		if collision.get_collider().has_method("receiveDamage"):
-			collision.get_collider().receiveDamage(1,1)
+			collision.get_collider().receiveDamage(15,1)
 	positionManager.updatePositions($KinematicBody2D.global_position, $KinematicBody2D.global_rotation)
 	firstBody.update()
 
 
 func _on_Area2D_body_entered(body):
-	body.get_parent().receiveDamage(1,1)
+	body.get_parent().receiveDamage(15,1)
 
 func _on_Reroute_timeout():
 	path = self.get_parent().update_path($KinematicBody2D/Mouth, player)

@@ -139,6 +139,8 @@ func receiveDamage(fis, mag):
 		$Rigid.collision_mask &= ~12
 		$DamagedTimer.set_wait_time(dmgInvulnTime)
 		$DamagedTimer.start()
+		# I don't know why but "fis" is always 1
+		state.player_hp = state.player_hp - 10
 
 func _on_DamagedTimer_timeout():
 	damaged = false
