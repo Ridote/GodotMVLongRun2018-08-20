@@ -125,6 +125,27 @@ func animate():
 
 func processSkills():
 	if skill1:
+		match desiredDirection:
+			DIRECTION.UP:
+				$Rigid/Sword.rotation = 0
+				$Rigid/Sword.position.x = 0
+				$Rigid/Sword.position.y = -16
+			DIRECTION.DOWN:
+				$Rigid/Sword.rotation = PI
+				$Rigid/Sword.position.x = 0
+				$Rigid/Sword.position.y = 16
+			DIRECTION.LEFT:
+				$Rigid/Sword.rotation = -PI/2
+				$Rigid/Sword.position.x = -16
+				$Rigid/Sword.position.y = 0
+			DIRECTION.RIGHT:
+				$Rigid/Sword.rotation = PI/2
+				$Rigid/Sword.position.x = 16
+				$Rigid/Sword.position.y = 0
+				
+			_:
+				print("Unknown error on player animate")
+				error()
 		$Rigid/Sword/SwordAnimation.play("DashDown")
 		casting = true
 		$Casting.wait_time = 0.5

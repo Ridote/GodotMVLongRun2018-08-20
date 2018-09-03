@@ -258,7 +258,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=10]
 
 resource_name = "DashDown"
-length = 1.0
+length = 0.9
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -268,34 +268,34 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ true, false ]
 }
 tracks/1/type = "value"
-tracks/1/path = NodePath(".:rotation_degrees")
+tracks/1/path = NodePath("Sprite:region_rect")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/imported = false
 tracks/1/enabled = true
 tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ 180.0 ]
+"values": [ Rect2( 2, 271, 6, 14 ), Rect2( 11, 271, 6, 14 ), Rect2( 19, 271, 7, 14 ), Rect2( 32, 269, 10, 14 ), Rect2( 47, 269, 12, 14 ), Rect2( 65, 277, 12, 8 ), Rect2( 81, 277, 13, 8 ) ]
 }
 tracks/2/type = "value"
-tracks/2/path = NodePath(".:position")
+tracks/2/path = NodePath("CollisionPolygon2D:rotation_degrees")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
 "update": 1,
-"values": [ Vector2( 0, 19 ) ]
+"values": [ 0.0, 0.0, 21.0, 41.799, 71.6335, 70.9543, 90.0 ]
 }
 tracks/3/type = "value"
 tracks/3/path = NodePath(".:collision_layer")
@@ -304,7 +304,7 @@ tracks/3/loop_wrap = true
 tracks/3/imported = false
 tracks/3/enabled = true
 tracks/3/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
 "values": [ 2, 0 ]
@@ -316,13 +316,37 @@ tracks/4/loop_wrap = true
 tracks/4/imported = false
 tracks/4/enabled = true
 tracks/4/keys = {
-"times": PoolRealArray( 0, 1 ),
+"times": PoolRealArray( 0, 0.7 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ 30, 0 ]
+"values": [ 28, 0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("CollisionPolygon2D:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 1.25403, 0.457363 ), Vector2( 4.58122, 2.06648 ), Vector2( 7.88479, 4.44312 ), Vector2( 9.77252, 4.40247 ), Vector2( 10.3017, 7.91958 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0.460703, 1.75067 ), Vector2( 3.73168, 1.3821 ), Vector2( 6.86446, 2.16529 ), Vector2( 8.56905, 5.25199 ), Vector2( 10.3197, 7.97013 ) ]
 }
 
-[node name="PlayerF" type="Node2D"]
+[node name="PlayerF" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 maxSpeed = 200
@@ -331,7 +355,6 @@ dmgInvulnTime = 1
 
 [node name="Rigid" type="RigidBody2D" parent="." index="0"]
 
-editor/display_folded = true
 input_pickable = false
 collision_layer = 1
 collision_mask = 28
@@ -411,8 +434,8 @@ editor_draw_drag_margin = false
 [node name="Sword" type="Area2D" parent="Rigid" index="3"]
 
 visible = false
-position = Vector2( 0, 19 )
-rotation = -3.14159
+position = Vector2( -2.07316, 17.9404 )
+rotation = 3.14159
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -426,15 +449,19 @@ _sections_unfolded = [ "Collision", "Transform", "Visibility" ]
 
 [node name="Sprite" type="Sprite" parent="Rigid/Sword" index="0"]
 
+position = Vector2( 10.3197, 7.97013 )
 texture = ExtResource( 3 )
 region_enabled = true
-region_rect = Rect2( 2, 271, 6, 14 )
-_sections_unfolded = [ "Region" ]
+region_rect = Rect2( 81, 277, 13, 8 )
+_sections_unfolded = [ "Region", "Transform" ]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Rigid/Sword" index="1"]
 
+position = Vector2( 10.3017, 7.91958 )
+rotation = 1.5708
 build_mode = 0
 polygon = PoolVector2Array( 1.99269, 7.00208, 2.0073, -6.99791, -1.99269, -7.00208, -2.0073, 6.99791 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="SwordAnimation" type="AnimationPlayer" parent="Rigid/Sword" index="2"]
 
@@ -461,6 +488,9 @@ one_shot = false
 autostart = false
 
 [node name="HUD" parent="." index="3" instance=ExtResource( 4 )]
+
+scale = Vector2( 0, 1 )
+transform = Transform2D( 0, 0, 0, 1, 0, 0 )
 
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_DamagedTimer_timeout"]
 
