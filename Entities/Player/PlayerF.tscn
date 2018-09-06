@@ -489,8 +489,10 @@ autostart = false
 
 [node name="HUD" parent="." index="3" instance=ExtResource( 4 )]
 
-scale = Vector2( 0, 1 )
+scale = Vector2( 0, -1 )
 transform = Transform2D( 0, 0, 0, 1, 0, 0 )
+
+[connection signal="body_entered" from="Rigid/Sword" to="." method="_on_Sword_body_entered"]
 
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_DamagedTimer_timeout"]
 

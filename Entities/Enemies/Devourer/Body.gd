@@ -40,4 +40,4 @@ func grow(length):
 		next.grow(length-1)
 
 func _on_BodyArea2D_body_entered(body):
-	body.get_parent().receiveDamage(1,1)
+	body.get_parent().receiveDamage(1,1, $BodyArea2D.global_position)

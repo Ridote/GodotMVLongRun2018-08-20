@@ -23,7 +23,7 @@ var casting = false
 enum DIRECTION {UP, DOWN, LEFT, RIGHT}
 var desiredDirection = DIRECTION.DOWN
 var lastAnimation = null
-
+var externalForce = Vector2(0,0)
 
 func _ready():
 	pass
@@ -80,7 +80,10 @@ func move(delta):
 	var linVel = $Rigid.linear_velocity
 	if((abs(linVel.x) + abs(linVel.y))> maxSpeed):
 		$Rigid.set_linear_velocity(moveDirection.normalized()*maxSpeed)
-
+	
+	$Rigid.apply_impulse(Vector2(0,0), externalForce*delta*acceleration)
+	externalForce *= 0.9
+	
 func animate():
 	#if we are moving fast, we are running
 	if (abs($Rigid.linear_velocity.x) > 0.1) or (abs($Rigid.linear_velocity.y) > 0.1):
@@ -152,7 +155,7 @@ func processSkills():
 		$Casting.start()
 		return
 
-func receiveDamage(fis, mag):
+func receiveDamage(fis, mag, from):
 	if !damaged:
 		damaged = true
 		#$Sprite/DamagedAnimation.play("Damaged")
@@ -162,6 +165,7 @@ func receiveDamage(fis, mag):
 		$DamagedTimer.start()
 		# I don't know why but "fis" is always 1
 		state.player_hp = state.player_hp - 10
+		externalForce += ($Rigid.global_position - from).normalized()*50
 
 func _on_DamagedTimer_timeout():
 	damaged = false
@@ -172,3 +176,7 @@ func _on_DamagedTimer_timeout():
 
 func _on_Casting_timeout():
 	casting = false
+
+
+func _on_Sword_body_entered(body):
+	body.get_parent().receiveDmg(1,0)
