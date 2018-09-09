@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Entities/Scenes/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Maps/TestMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Enemies/Devourer/Head.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Player/PlayerF.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/GUI/HUD.tscn" type="PackedScene" id=5]
 
 [node name="Test" type="Node2D"]
 
@@ -16,8 +17,11 @@ script = ExtResource( 1 )
 [node name="DevourerHead" parent="Navigation2D" index="1" instance=ExtResource( 3 )]
 
 position = Vector2( 1128.17, 534.389 )
-hitRecoveryTime = 1.5
 
 [node name="Player" parent="Navigation2D" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 988.338, 482.505 )
+
+[node name="HUD" parent="." index="1" instance=ExtResource( 5 )]
 
 

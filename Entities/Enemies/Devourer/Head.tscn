@@ -32,7 +32,7 @@ tracks/0/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 12.881, 7.33015 )
 
-[node name="DevourerHead" type="Node2D"]
+[node name="DevourerHead" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
@@ -46,7 +46,7 @@ path = [  ]
 
 input_pickable = false
 collision_layer = 4
-collision_mask = 0
+collision_mask = 48
 collision/safe_margin = 0.08
 _sections_unfolded = [ "Collision", "Transform" ]
 

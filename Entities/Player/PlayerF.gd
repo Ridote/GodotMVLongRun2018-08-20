@@ -166,6 +166,8 @@ func receiveDamage(fis, mag, from):
 		# I don't know why but "fis" is always 1
 		state.player_hp = state.player_hp - 10
 		externalForce += ($Rigid.global_position - from).normalized()*50
+	if state.player_hp == 0:
+		queue_free()
 
 func _on_DamagedTimer_timeout():
 	damaged = false

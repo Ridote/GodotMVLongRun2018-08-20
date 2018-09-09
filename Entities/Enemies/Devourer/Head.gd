@@ -23,7 +23,8 @@ var maxTurn = 0.2
 var player = null
 
 var hitRecovery = false
-
+var randomDirection = false
+var accRot = 0.0
 
 func _ready():
 	$KinematicBody2D/Mouth/MouthAnimation.get_animation("MouthAnimation").set_loop(true)
@@ -40,14 +41,29 @@ func _ready():
 
 func _physics_process(delta):
 	if !hitRecovery:
-		if path.size() > 0:
-			$KinematicBody2D.look_at(path[0])
-			# random 0.5 degree
-			$KinematicBody2D.rotation += 89.5
-			if $KinematicBody2D.global_position.distance_to(path[0]) < 2:
-				path.remove(0)
+		#This should be executed if the player has been hit as well TODO
+		if(randomDirection):
+			accRot += (randf()*2 - 1)*maxTurn
+			if accRot > maxTurn:
+				accRot = maxTurn
+			elif accRot < -maxTurn:
+				accRot = -maxTurn
+			$KinematicBody2D.rotation += accRot
+			
+			
 		else:
-			if player:
+			#If player has been killed
+			if(!weakref(player).get_ref()):
+				randomDirection = true
+				$Reroute.stop()
+				$HitRecovery.stop()
+			elif path.size() > 0:
+				$KinematicBody2D.look_at(path[0])
+				# random 0.5 degree
+				$KinematicBody2D.rotation += 89.5
+				if $KinematicBody2D.global_position.distance_to(path[0]) < 2:
+					path.remove(0)
+			else:
 				path = self.get_parent().update_path($KinematicBody2D/Mouth, player)
 		
 		var speedDirection = Vector2(sin($KinematicBody2D.rotation), -cos($KinematicBody2D.rotation)).normalized()
