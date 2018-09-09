@@ -3,7 +3,7 @@
 [ext_resource path="res://Entities/Scenes/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Maps/TestMap.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Enemies/Devourer/Head.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Entities/Player/PlayerF.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Entities/GUI/HUD.tscn" type="PackedScene" id=5]
 
 [node name="Test" type="Node2D"]

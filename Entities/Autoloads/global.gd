@@ -8,8 +8,9 @@ func _ready():
 	utils.newTimer(2, self, "showQuest", false)
 
 func showQuest():
-	var q = questWelcome.instance()
-	get_tree().get_root().add_child(q)
+	#var q = questWelcome.instance()
+	#get_tree().get_root().add_child(q)
+	pass # Valiente porculo tu puta quest
 	
 func getDevourerBodyInstance():
 	return devourerBody.instance()

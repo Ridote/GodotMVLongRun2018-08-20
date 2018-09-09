@@ -16,9 +16,9 @@ config/icon="res://icon.png"
 
 [autoload]
 
-utils="*res://Entities/utils.gd"
-global="*res://Entities/global.gd"
-state="*res://Entities/state.gd"
+utils="*res://Entities/Autoloads/utils.gd"
+global="*res://Entities/Autoloads/global.gd"
+state="*res://Entities/Autoloads/state.gd"
 
 [editor_plugins]
 

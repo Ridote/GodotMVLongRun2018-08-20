@@ -1,64 +1,41 @@
-extends KinematicBody2D
+extends Node2D
 
-export var speed = 300.0
+#Conf
+export var maxSpeed = 200
+export var acceleration = 500
+export var dmgInvulnTime = 1
+
+#Inputs
+var skill1 = null
+var skill2 = null
+var skill3 = null
+var skill4 = null
+var skill5 = null
+var moveRight = null
+var moveLeft = null
+var moveUp = null
+var moveDown = null
 
 #Control
-var playingAnimation = ""
 var damaged = false
-var dmgInvulnTime = 2.0
 var casting = false
-var speedDirection = Vector2(0,0)
-#Input
-var skill1 = false
-var skill2 = false
-var skill3 = false
-var skill4 = false
-var skill5 = false
-var moveRight = false
-var moveLeft = false
-var moveDown = false
-var moveUp = false
+
+enum DIRECTION {UP, DOWN, LEFT, RIGHT}
+var desiredDirection = DIRECTION.DOWN
+var lastAnimation = null
+var externalForce = Vector2(0,0)
 
 func _ready():
-	$MovementAnimation.get_animation("WalkUp").set_loop(true)
-	$MovementAnimation.get_animation("WalkLeft").set_loop(true)
-	$MovementAnimation.get_animation("WalkRight").set_loop(true)
-	$MovementAnimation.get_animation("WalkDown").set_loop(true)
-	$Light2D/LightAnimation.get_animation("LightAttenuation").set_loop(true)
-	$Sprite/DamagedAnimation.get_animation("Damaged").set_loop(true)
-	
-	#PLEASE DELETE ME
-	print("Muévete con WASD. Ataca con Q y no te olvides de pinchar con el ratón sobre el juego para que haga focus sobre la pantalla y puedas usar las teclas.")
+	pass
 
 func _physics_process(delta):
 	if !casting:
 		readInput()
 		move(delta)
-		if skill1:
-			$Casting.wait_time = 0.5
-			$Casting.start()
-			casting = true
-			if playingAnimation in ["WalkDown", "IddleDown"]:
-				$Sword.position.x = 0
-				$Sword.position.y = 32
-				$Sword.rotation = PI
-			elif playingAnimation in ["WalkLeft", "IddleLeft"]:
-				$Sword.position.x = -64
-				$Sword.position.y = 0
-				$Sword.rotation = PI/2
-			elif playingAnimation in ["WalkRight", "IddleRight"]:
-				$Sword.position.x = 64
-				$Sword.position.y = 0
-				$Sword.rotation = -PI/2
-			else:
-				$Sword.position.x = 0
-				$Sword.position.y = -64
-				$Sword.rotation = -PI
-				
-			
-			
-			$Sword/SwordAnimation.play("Slash")
-	animate(speedDirection)
+		processSkills()
+	else:
+		$Rigid.linear_velocity = Vector2(0,0)
+	animate()
 
 func readInput():
 	skill1 = Input.is_action_pressed("Skill1")
@@ -72,55 +49,136 @@ func readInput():
 	moveDown = Input.is_action_pressed("ui_down")
 	
 func move(delta):
-	speedDirection = Vector2(int(moveRight) + (int(moveLeft)*-1), int(moveDown) + (int(moveUp)*-1)).normalized()
-	#move_and_collide <- needs delta
-	#move_and_slide <- doesn't need delta
-	move_and_slide(speedDirection*speed)
-
-func animate(speedDirection):
-	var prevAnim = playingAnimation
-	if speedDirection.x > 0.1:
-		playingAnimation = "WalkRight"
-	elif speedDirection.x < -0.1:
-		playingAnimation = "WalkLeft"
-	elif speedDirection.y < -0.1:
-		playingAnimation = "WalkUp"
-	elif speedDirection.y > 0.1:
-		playingAnimation = "WalkDown"
+	var moveDirection = Vector2(0,0)
+	if moveRight:
+		moveDirection.x = 1
+	elif moveLeft:
+		moveDirection.x = -1
 	else:
-		if playingAnimation in ["WalkRight", "IddleRight"]:
-			playingAnimation = "IddleRight"
-		elif playingAnimation in ["WalkLeft", "IddleLeft"]:
-			playingAnimation = "IddleLeft"
-		elif playingAnimation in ["WalkUp", "IddleUp"]:
-			playingAnimation = "IddleUp"
-		else:
-			playingAnimation = "IddleDown"
-	if prevAnim != playingAnimation:
-		$MovementAnimation.play(playingAnimation)
+		$Rigid.linear_velocity.x /= 2
+	if moveUp:
+		moveDirection.y = -1
+	elif moveDown:
+		moveDirection.y = 1
+	else:
+		$Rigid.linear_velocity.y /= 2
+	$Rigid.apply_impulse(Vector2(0,0), moveDirection.normalized()*delta*acceleration)
+	
+	#Get the direction we want to move to update the sprite despite of the real velocity
+	if (abs(moveDirection.x) - abs(moveDirection.y)) > 0.1:
+		if moveDirection.x > 0.1:
+			desiredDirection = DIRECTION.RIGHT
+		elif moveDirection.x < -0.1:
+			desiredDirection = DIRECTION.LEFT
+	elif (abs(moveDirection.y) - abs(moveDirection.x)) > 0.1:
+		if moveDirection.y < -0.1:
+			desiredDirection = DIRECTION.UP
+		elif moveDirection.y > 0.1:
+			desiredDirection = DIRECTION.DOWN
+	
+	#Clamp to max speed
+	var linVel = $Rigid.linear_velocity
+	if((abs(linVel.x) + abs(linVel.y))> maxSpeed):
+		$Rigid.set_linear_velocity(moveDirection.normalized()*maxSpeed)
+	
+	$Rigid.apply_impulse(Vector2(0,0), externalForce*delta*acceleration)
+	externalForce *= 0.9
+	
+func animate():
+	#if we are moving fast, we are running
+	if (abs($Rigid.linear_velocity.x) > 0.1) or (abs($Rigid.linear_velocity.y) > 0.1):
+		match desiredDirection:
+			DIRECTION.UP:
+				if lastAnimation != "RunningUp":
+					$Rigid/Sprite/AnimationPlayer.play("RunningUp")
+					lastAnimation = "RunningUp"
+			DIRECTION.DOWN:
+				if lastAnimation != "RunningDown":
+					$Rigid/Sprite/AnimationPlayer.play("RunningDown")
+					lastAnimation = "RunningDown"
+			DIRECTION.LEFT:
+				if lastAnimation != "RunningLeft":
+					$Rigid/Sprite/AnimationPlayer.play("RunningLeft")
+					lastAnimation = "RunningLeft"
+			DIRECTION.RIGHT:
+				if lastAnimation != "RunningRight":
+					$Rigid/Sprite/AnimationPlayer.play("RunningRight")
+					lastAnimation = "RunningRight"
+			_:
+				print("Unknown error on player animate")
+				error()
+	#if not, we are idle
+	else:
+		match desiredDirection:
+			DIRECTION.UP:
+				$Rigid/Sprite/AnimationPlayer.play("IdleUp")
+				lastAnimation = "IdleUp"
+			DIRECTION.DOWN:
+				$Rigid/Sprite/AnimationPlayer.play("IdleDown")
+				lastAnimation = "IdleDown"
+			DIRECTION.LEFT:
+				$Rigid/Sprite/AnimationPlayer.play("IdleLeft")
+				lastAnimation = "IdleLeft"
+			DIRECTION.RIGHT:
+				$Rigid/Sprite/AnimationPlayer.play("IdleRight")
+				lastAnimation = "IdleRight"
+			_:
+				print("Unknown error on player animate")
+				error()
 
-func receiveDamage(fis, mag):
+func processSkills():
+	if skill1:
+		match desiredDirection:
+			DIRECTION.UP:
+				$Rigid/Sword.rotation = 0
+				$Rigid/Sword.position.x = 0
+				$Rigid/Sword.position.y = -16
+			DIRECTION.DOWN:
+				$Rigid/Sword.rotation = PI
+				$Rigid/Sword.position.x = 0
+				$Rigid/Sword.position.y = 16
+			DIRECTION.LEFT:
+				$Rigid/Sword.rotation = -PI/2
+				$Rigid/Sword.position.x = -16
+				$Rigid/Sword.position.y = 0
+			DIRECTION.RIGHT:
+				$Rigid/Sword.rotation = PI/2
+				$Rigid/Sword.position.x = 16
+				$Rigid/Sword.position.y = 0
+				
+			_:
+				print("Unknown error on player animate")
+				error()
+		$Rigid/Sword/SwordAnimation.play("DashDown")
+		casting = true
+		$Casting.wait_time = 0.5
+		$Casting.start()
+		return
+
+func receiveDamage(fis, mag, from):
 	if !damaged:
-		print("got damage")
 		damaged = true
-		$Sprite/DamagedAnimation.play("Damaged")
+		#$Sprite/DamagedAnimation.play("Damaged")
 		#Removing enemies and enemies projectiles from the collision mask
-		collision_mask &= ~12
+		$Rigid.collision_mask &= ~12
 		$DamagedTimer.set_wait_time(dmgInvulnTime)
 		$DamagedTimer.start()
-		state.player_hp -= fis
+		# I don't know why but "fis" is always 1
+		state.player_hp = state.player_hp - 10
+		externalForce += ($Rigid.global_position - from).normalized()*50
+	if state.player_hp == 0:
+		queue_free()
 
-func _on_Damaged_timeout():
+func _on_DamagedTimer_timeout():
 	damaged = false
-	$Sprite/DamagedAnimation.play("NotDamaged")
+	#$Sprite/DamagedAnimation.play("NotDamaged")
 	#Writting back enemies and enemies projectiles into the collision mask
-	collision_mask |= 12
+	$Rigid.collision_mask |= 12
 
 
 func _on_Casting_timeout():
 	casting = false
 
 
-func _on_SwordCollision_body_entered(body):
-	body.get_parent().receiveDamage(2,0)
-	$OnHitSound.play()
+func _on_Sword_body_entered(body):
+	body.get_parent().receiveDmg(1,0)
