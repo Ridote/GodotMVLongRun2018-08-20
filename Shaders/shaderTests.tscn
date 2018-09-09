@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Shaders/ColorInverted.tres" type="Material" id=1]
+[ext_resource path="res://Graphics/Sprites/link_alpha.png" type="Texture" id=2]
+
+
+[node name="Sprite" type="Sprite" index="0"]
+
+material = ExtResource( 1 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 18, 32 )
+_sections_unfolded = [ "Material", "Region" ]
+
+
