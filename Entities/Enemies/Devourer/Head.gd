@@ -80,6 +80,7 @@ func receiveDmg(fis, mag):
 	$HitRecovery.start()
 
 func _on_Area2D_body_entered(body):
+	print(body.get_name())
 	body.get_parent().receiveDamage(15,1, $KinematicBody2D.global_position)
 
 func _on_Reroute_timeout():

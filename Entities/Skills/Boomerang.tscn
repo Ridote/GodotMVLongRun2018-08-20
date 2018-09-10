@@ -81,4 +81,13 @@ playback_speed = 1.0
 anims/spin = SubResource( 4 )
 blend_times = [  ]
 
+[node name="Timer" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+
 

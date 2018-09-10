@@ -1,5 +1,7 @@
 extends Node2D
 
+var boomerangFactory = load("res://Entities/Skills/Boomerang.tscn")
+
 #Conf
 export var maxSpeed = 200
 export var acceleration = 500
@@ -19,6 +21,8 @@ var moveDown = null
 #Control
 var damaged = false
 var casting = false
+var boomerangOnFlight = false
+
 
 enum DIRECTION {UP, DOWN, LEFT, RIGHT}
 var desiredDirection = DIRECTION.DOWN
@@ -154,7 +158,15 @@ func processSkills():
 		$Casting.wait_time = 0.5
 		$Casting.start()
 		return
-
+		
+	if skill2 && !boomerangOnFlight:
+		var boomerang = boomerangFactory.instance()
+		self.add_child(boomerang)
+		boomerang.source = self
+		boomerang.setStartingPosition($Rigid.global_position)
+		boomerangOnFlight = true
+func getGlobalPosition():
+	return $Rigid.global_position
 func receiveDamage(fis, mag, from):
 	if !damaged:
 		damaged = true
@@ -168,6 +180,9 @@ func receiveDamage(fis, mag, from):
 		externalForce += ($Rigid.global_position - from).normalized()*50
 	if state.player_hp == 0:
 		queue_free()
+
+func onBoomerangBack():
+	boomerangOnFlight = false
 
 func _on_DamagedTimer_timeout():
 	damaged = false
