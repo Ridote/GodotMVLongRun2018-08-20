@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Graphics/GUI/button_1(frame).png" type="Texture" id=1]
 
-[node name="Skill" type="TextureButton" index="0"]
+[node name="Skill" type="TextureButton"]
 
 anchor_left = 0.0
 anchor_top = 0.0

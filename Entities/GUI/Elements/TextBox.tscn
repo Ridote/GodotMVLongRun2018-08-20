@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Graphics/GUI/textField.png" type="Texture" id=1]
 
-[node name="TextBox" type="NinePatchRect" index="0"]
+[node name="TextBox" type="NinePatchRect"]
 
 anchor_left = 0.0
 anchor_top = 0.0
