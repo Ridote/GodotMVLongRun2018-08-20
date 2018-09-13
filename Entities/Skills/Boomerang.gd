@@ -1,9 +1,9 @@
 extends Node2D
 
 #CHANGE THE DIRECTION FROM THE SOURCE!!!!!
-var direction = Vector2(3, 5).normalized()
+var boomerangDirection = Vector2(3, 5).normalized()
 
-var speed = 100
+var speed = 300
 var maxSpeed = 600
 
 var target = Vector2(0,0)
@@ -18,15 +18,16 @@ func _physics_process(delta):
 	if turnBack:
 		if source:
 			var sourcePos = source.getGlobalPosition()
-			#If this fails it is because we assume direction will always be a normalised vector
-			direction = Vector2((2*direction + (sourcePos-$KBody2D.global_position).normalized())).normalized()
+			var desiredDirection = (sourcePos-$KBody2D.global_position).normalized()
+			#If this fails it is because we assume boomerangDirection will always be a normalised vector
+			boomerangDirection = Vector2(0.8*boomerangDirection + 0.2*desiredDirection)
 
-		var collision = $KBody2D.move_and_collide(direction*speed*delta)
+		var collision = $KBody2D.move_and_collide(boomerangDirection*speed*delta)
 		if collision:
 			collision.get_collider().get_parent().onBoomerangBack()
 			queue_free()
 	else:
-		var collision = $KBody2D.move_and_collide(direction*speed*delta)
+		var collision = $KBody2D.move_and_collide(boomerangDirection*speed*delta)
 		
 		speed *= 1.05
 		if speed > maxSpeed:
@@ -34,7 +35,7 @@ func _physics_process(delta):
 
 		#If we collide, no matter with what, we come back and try to apply damage
 		if collision != null:
-			direction = (source.getGlobalPosition()-$KBody2D.global_position).normalized()
+			boomerangDirection = (source.getGlobalPosition()-$KBody2D.global_position).normalized()
 			if collision.get_collider().has_method("receiveDamage"):
 				collision.get_collider().receiveDamage(1.0,0.0)
 

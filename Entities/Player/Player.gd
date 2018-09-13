@@ -26,6 +26,8 @@ var boomerangOnFlight = false
 
 enum DIRECTION {UP, DOWN, LEFT, RIGHT}
 var desiredDirection = DIRECTION.DOWN
+var moveDirection = Vector2(0,0)
+
 var lastAnimation = null
 var externalForce = Vector2(0,0)
 
@@ -53,18 +55,19 @@ func readInput():
 	moveDown = Input.is_action_pressed("ui_down")
 	
 func move(delta):
-	var moveDirection = Vector2(0,0)
 	if moveRight:
 		moveDirection.x = 1
 	elif moveLeft:
 		moveDirection.x = -1
 	else:
+		moveDirection.x = 0
 		$Rigid.linear_velocity.x /= 2
 	if moveUp:
 		moveDirection.y = -1
 	elif moveDown:
 		moveDirection.y = 1
 	else:
+		moveDirection.y = 0
 		$Rigid.linear_velocity.y /= 2
 	$Rigid.apply_impulse(Vector2(0,0), moveDirection.normalized()*delta*acceleration)
 	
@@ -160,11 +163,29 @@ func processSkills():
 		return
 		
 	if skill2 && !boomerangOnFlight:
+		var boomerangDirection = Vector2(0,0)
 		var boomerang = boomerangFactory.instance()
 		self.add_child(boomerang)
+		#If we are not moving we'll use desired direction
+		match desiredDirection:
+			DIRECTION.UP:
+				boomerang.setStartingPosition($Rigid.global_position + Vector2(0.0, -16.0))
+				boomerangDirection.y = -1
+			DIRECTION.DOWN:
+				boomerang.setStartingPosition($Rigid.global_position + Vector2(0.0, 16.0))
+				boomerangDirection.y = 1
+			DIRECTION.LEFT:
+				boomerang.setStartingPosition($Rigid.global_position + Vector2(-16.0, 0.0))
+				boomerangDirection.x = -1
+			DIRECTION.RIGHT:
+				boomerang.setStartingPosition($Rigid.global_position + Vector2(16.0, 0.0))
+				boomerangDirection.x = 1
+		if(moveDirection.x != 0 && moveDirection.y != 0):
+			boomerangDirection = moveDirection.normalized()
 		boomerang.source = self
-		boomerang.setStartingPosition($Rigid.global_position)
+		boomerang.boomerangDirection = boomerangDirection
 		boomerangOnFlight = true
+		
 func getGlobalPosition():
 	return $Rigid.global_position
 func receiveDamage(fis, mag, from):
