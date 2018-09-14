@@ -218,3 +218,7 @@ func _on_Casting_timeout():
 
 func _on_Sword_body_entered(body):
 	body.get_parent().receiveDmg(1,0)
+
+
+func _on_Interaction_body_entered(body):
+	print(body.get_name())

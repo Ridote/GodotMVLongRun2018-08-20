@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Entities/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Sprites/link_alpha.png" type="Texture" id=2]
@@ -345,7 +345,12 @@ tracks/6/keys = {
 "values": [ Vector2( 0, 0 ), Vector2( 0, 0 ), Vector2( 0.460703, 1.75067 ), Vector2( 3.73168, 1.3821 ), Vector2( 6.86446, 2.16529 ), Vector2( 8.56905, 5.25199 ), Vector2( 10.3197, 7.97013 ) ]
 }
 
-[node name="PlayerF" type="Node2D"]
+[sub_resource type="RectangleShape2D" id=11]
+
+custom_solver_bias = 0.0
+extents = Vector2( 5, 4 )
+
+[node name="PlayerF" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 maxSpeed = 200
@@ -356,7 +361,7 @@ dmgInvulnTime = 1
 
 input_pickable = false
 collision_layer = 1
-collision_mask = 28
+collision_mask = 92
 mode = 2
 mass = 1.0
 friction = 0.0
@@ -372,7 +377,7 @@ linear_velocity = Vector2( 0, 0 )
 linear_damp = 1.0
 angular_velocity = 0.0
 angular_damp = -1.0
-_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Transform" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rigid" index="0"]
 
@@ -380,6 +385,7 @@ shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="Rigid" index="1"]
 
+editor/display_folded = true
 texture = ExtResource( 2 )
 vframes = 21
 hframes = 13
@@ -431,6 +437,7 @@ editor_draw_drag_margin = false
 
 [node name="Sword" type="Area2D" parent="Rigid" index="3"]
 
+editor/display_folded = true
 visible = false
 position = Vector2( -2.07316, 17.9404 )
 rotation = 3.14159
@@ -471,6 +478,25 @@ playback_speed = 1.0
 anims/DashDown = SubResource( 10 )
 blend_times = [  ]
 
+[node name="Interaction" type="Area2D" parent="Rigid" index="4"]
+
+editor/display_folded = true
+position = Vector2( 0, 15 )
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+collision_mask = 64
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rigid/Interaction" index="0"]
+
+shape = SubResource( 11 )
+
 [node name="DamagedTimer" type="Timer" parent="." index="1"]
 
 process_mode = 1
@@ -486,6 +512,8 @@ one_shot = false
 autostart = false
 
 [connection signal="body_entered" from="Rigid/Sword" to="." method="_on_Sword_body_entered"]
+
+[connection signal="body_entered" from="Rigid/Interaction" to="." method="_on_Interaction_body_entered"]
 
 [connection signal="timeout" from="DamagedTimer" to="." method="_on_DamagedTimer_timeout"]
 
