@@ -8,7 +8,7 @@
 custom_solver_bias = 0.0
 extents = Vector2( 8, 8 )
 
-[sub_resource type="Animation" id=3]
+[sub_resource type="Animation" id=2]
 
 resource_name = "Closed"
 length = 1.0
@@ -27,9 +27,8 @@ tracks/0/keys = {
 "values": [ Rect2( 132, 88, 16, 16 ) ]
 }
 
-[sub_resource type="Animation" id=2]
+[sub_resource type="Animation" id=3]
 
-resource_name = "Opened"
 length = 0.1
 loop = false
 step = 0.1
@@ -46,7 +45,7 @@ tracks/0/keys = {
 "values": [ Rect2( 156, 88, 16, 16 ) ]
 }
 
-[node name="SmallChest" type="Node2D"]
+[node name="SmallChest" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 
@@ -79,8 +78,8 @@ autoplay = ""
 playback_process_mode = 1
 playback_default_blend_time = 0.0
 playback_speed = 1.0
-anims/Closed = SubResource( 3 )
-anims/Opened = SubResource( 2 )
+anims/Closed = SubResource( 2 )
+anims/Opened = SubResource( 3 )
 blend_times = [  ]
 
 

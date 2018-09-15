@@ -9,5 +9,6 @@ func _process(delta):
 	pass
 
 func open():
-	opened = true
-	$StaticBody2D/AnimationPlayer.play("Opened")
+	if !opened:
+		opened = true
+		$StaticBody2D/AnimationPlayer.play("Opened")

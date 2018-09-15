@@ -350,7 +350,7 @@ tracks/6/keys = {
 custom_solver_bias = 0.0
 extents = Vector2( 5, 4 )
 
-[node name="PlayerF" type="Node2D" index="0"]
+[node name="PlayerF" type="Node2D"]
 
 script = ExtResource( 1 )
 maxSpeed = 200
@@ -480,18 +480,17 @@ blend_times = [  ]
 
 [node name="Interaction" type="Area2D" parent="Rigid" index="4"]
 
-editor/display_folded = true
-position = Vector2( 0, 15 )
+position = Vector2( 0, 16 )
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
 linear_damp = 0.1
 angular_damp = 1.0
 collision_layer = 0
-collision_mask = 64
+collision_mask = 0
 audio_bus_override = false
 audio_bus_name = "Master"
-_sections_unfolded = [ "Collision" ]
+_sections_unfolded = [ "Collision", "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Rigid/Interaction" index="0"]
 

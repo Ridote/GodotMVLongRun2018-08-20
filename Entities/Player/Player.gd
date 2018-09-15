@@ -12,7 +12,7 @@ var skill1 = null
 var skill2 = null
 var skill3 = null
 var skill4 = null
-var skill5 = null
+var interact = null
 var moveRight = null
 var moveLeft = null
 var moveUp = null
@@ -36,23 +36,29 @@ func _ready():
 
 func _physics_process(delta):
 	if !casting:
-		readInput()
 		move(delta)
+		#Important to update the interaction now before process skills
+		updateInteraction()
 		processSkills()
 	else:
 		$Rigid.linear_velocity = Vector2(0,0)
 	animate()
-
-func readInput():
+	
+func _input(event):
 	skill1 = Input.is_action_pressed("Skill1")
 	skill2 = Input.is_action_pressed("Skill2")
 	skill3 = Input.is_action_pressed("Skill3")
 	skill4 = Input.is_action_pressed("Skill4")
-	skill5 = Input.is_action_pressed("Skill5")
+	if !interact:
+		interact = Input.is_action_just_pressed("Interact")
+	if Input.is_action_just_released("Interact"):
+		$Rigid/Interaction.collision_mask = 0
+		interact = false
 	moveRight = Input.is_action_pressed("ui_right")
 	moveLeft = Input.is_action_pressed("ui_left")
 	moveUp = Input.is_action_pressed("ui_up")
 	moveDown = Input.is_action_pressed("ui_down")
+
 	
 func move(delta):
 	if moveRight:
@@ -90,7 +96,17 @@ func move(delta):
 	
 	$Rigid.apply_impulse(Vector2(0,0), externalForce*delta*acceleration)
 	externalForce *= 0.9
-	
+
+func updateInteraction():
+	match desiredDirection:
+		DIRECTION.UP:
+			$Rigid/Interaction.position = Vector2(0, -16)
+		DIRECTION.DOWN:
+			$Rigid/Interaction.position = Vector2(0, 16)
+		DIRECTION.LEFT:
+			$Rigid/Interaction.position = Vector2(-16, 0)
+		DIRECTION.RIGHT:
+			$Rigid/Interaction.position = Vector2(16, 0)
 func animate():
 	#if we are moving fast, we are running
 	if (abs($Rigid.linear_velocity.x) > 0.1) or (abs($Rigid.linear_velocity.y) > 0.1):
@@ -186,6 +202,9 @@ func processSkills():
 		boomerang.boomerangDirection = boomerangDirection
 		boomerangOnFlight = true
 		
+	if interact:
+		$Rigid/Interaction.collision_mask = 64 # Items
+		
 func getGlobalPosition():
 	return $Rigid.global_position
 func receiveDamage(fis, mag, from):
@@ -221,4 +240,7 @@ func _on_Sword_body_entered(body):
 
 
 func _on_Interaction_body_entered(body):
-	print(body.get_name())
+	$Rigid/Interaction.collision_mask = 0
+	match body.get_parent().get_name():
+		"SmallChest":
+			body.get_parent().open()
