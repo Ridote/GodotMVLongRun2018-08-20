@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://Graphics/Tilesets/Fields.tres" type="TileSet" id=1]
 [ext_resource path="res://Entities/Items/SmallChest.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Entities/MapElements/Door.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
@@ -79,5 +80,9 @@ _sections_unfolded = [ "Z Index" ]
 [node name="SmallChest" parent="." index="4" instance=ExtResource( 2 )]
 
 position = Vector2( 715.033, 722.687 )
+
+[node name="Door" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 1001.19, 645.869 )
 
 

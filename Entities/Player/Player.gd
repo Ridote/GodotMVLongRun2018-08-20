@@ -203,7 +203,7 @@ func processSkills():
 		boomerangOnFlight = true
 		
 	if interact:
-		$Rigid/Interaction.collision_mask = 64 # Items
+		$Rigid/Interaction.collision_mask = 128 # Interaction collision mask
 		
 func getGlobalPosition():
 	return $Rigid.global_position
@@ -243,4 +243,6 @@ func _on_Interaction_body_entered(body):
 	$Rigid/Interaction.collision_mask = 0
 	match body.get_parent().get_name():
 		"SmallChest":
+			body.get_parent().open()
+		"Door":
 			body.get_parent().open()
