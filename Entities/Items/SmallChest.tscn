@@ -1,17 +1,17 @@
 [gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Entities/Items/SmallChest.gd" type="Script" id=1]
-[ext_resource path="res://Graphics/Sprites/zelda_items.png" type="Texture" id=2]
+[ext_resource path="res://Graphics/Tilesets/RogueDungeon.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 8, 8 )
+extents = Vector2( 8, 7 )
 
 [sub_resource type="Animation" id=2]
 
 resource_name = "Closed"
-length = 1.0
+length = 0.1
 loop = false
 step = 0.1
 tracks/0/type = "value"
@@ -24,7 +24,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Rect2( 132, 88, 16, 16 ) ]
+"values": [ Rect2( 64, 176, 16, 16 ) ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -42,7 +42,7 @@ tracks/0/keys = {
 "times": PoolRealArray( 0 ),
 "transitions": PoolRealArray( 1 ),
 "update": 0,
-"values": [ Rect2( 156, 88, 16, 16 ) ]
+"values": [ Rect2( 80, 176, 16, 16 ) ]
 }
 
 [node name="SmallChest" type="Node2D"]
@@ -62,13 +62,14 @@ _sections_unfolded = [ "Collision" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" index="0"]
 
+position = Vector2( 0, 1 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="StaticBody2D" index="1"]
 
 texture = ExtResource( 2 )
 region_enabled = true
-region_rect = Rect2( 156, 88, 16, 16 )
+region_rect = Rect2( 64, 176, 16, 16 )
 _sections_unfolded = [ "Region" ]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="StaticBody2D" index="2"]

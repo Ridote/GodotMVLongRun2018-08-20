@@ -174,7 +174,7 @@ func processSkills():
 				error()
 		$Rigid/Sword/SwordAnimation.play("DashDown")
 		casting = true
-		$Casting.wait_time = 0.5
+		$Casting.wait_time = 0.3
 		$Casting.start()
 		return
 		
@@ -226,7 +226,6 @@ func onBoomerangBack():
 
 func _on_DamagedTimer_timeout():
 	damaged = false
-	#$Sprite/DamagedAnimation.play("NotDamaged")
 	#Writting back enemies and enemies projectiles into the collision mask
 	$Rigid.collision_mask |= 12
 
@@ -236,6 +235,7 @@ func _on_Casting_timeout():
 
 
 func _on_Sword_body_entered(body):
+	print(body.get_parent().get_name())
 	body.get_parent().receiveDmg(1,0)
 
 
@@ -245,4 +245,6 @@ func _on_Interaction_body_entered(body):
 		"SmallChest":
 			body.get_parent().open()
 		"Door":
+			body.get_parent().open()
+		"Lock":
 			body.get_parent().open()

@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roguelikeSheet_transparent.png-bd756c8baf02745b661c19bcac066538.stex"
+path="res://.import/RoguePlayer.png-0f27e64c756ac5158da1aaf6a80acc1b.stex"
 
 [deps]
 
-source_file="res://Graphics/Tilesets/roguelikeSheet_transparent.png"
-dest_files=[ "res://.import/roguelikeSheet_transparent.png-bd756c8baf02745b661c19bcac066538.stex" ]
+source_file="res://Graphics/Sprites/Player/RoguePlayer.png"
+dest_files=[ "res://.import/RoguePlayer.png-0f27e64c756ac5158da1aaf6a80acc1b.stex" ]
 
 [params]
 

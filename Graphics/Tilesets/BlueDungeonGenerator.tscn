@@ -1,0 +1,6021 @@
+[gd_scene load_steps=258 format=2]
+
+[ext_resource path="res://Graphics/Tilesets/RogueDungeon.png" type="Texture" id=1]
+
+[sub_resource type="NavigationPolygon" id=1]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=2]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=4]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=5]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=121]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=122]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=154]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=155]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=187]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=188]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=220]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=221]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=253]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=254]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=286]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=287]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=319]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=320]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=352]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=353]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=7]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=8]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=40]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=41]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=73]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=74]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=100]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=101]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=103]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=104]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=106]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=107]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=109]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=110]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=112]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=113]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=115]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=116]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=118]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=119]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=124]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=125]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=127]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=128]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=130]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=131]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=133]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=134]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=136]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=137]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=139]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=140]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=142]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=143]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=145]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=146]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=148]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=149]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=151]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=152]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=157]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=158]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=160]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=161]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=163]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=164]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=166]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=167]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=169]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=170]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=172]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=173]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=175]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=176]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=178]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=179]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=181]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=182]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=184]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=185]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=190]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=191]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=193]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=194]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=196]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=197]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=199]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=200]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=202]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=203]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=205]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=206]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=208]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=209]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=211]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=212]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=214]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=215]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=217]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=218]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=223]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=224]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=226]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=227]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=229]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=230]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=232]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=233]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=235]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=236]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=238]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=239]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=241]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=242]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=244]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=245]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=247]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=248]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=250]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=251]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=256]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=257]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=259]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=260]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=262]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=263]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=265]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=266]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=268]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=269]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=271]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=272]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=274]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=275]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=277]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=278]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=280]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=281]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=283]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=284]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=289]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=290]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=292]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=293]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=295]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=296]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=298]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=299]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=301]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=302]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=304]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=305]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=307]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=308]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=310]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=311]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=313]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=314]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=316]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=317]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=322]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=323]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=325]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=326]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=328]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=329]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=331]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=332]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=334]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=335]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=337]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=338]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=340]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=341]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=343]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=344]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=346]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=347]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=349]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=350]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=355]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=356]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=358]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=359]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=361]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=362]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=364]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=365]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=367]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=368]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=370]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=371]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=373]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=374]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=376]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=377]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=379]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=380]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=382]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=383]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=10]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=11]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=13]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=14]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=16]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=17]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=19]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=20]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=22]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=23]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=25]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=26]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=28]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=29]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=31]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=32]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=34]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=35]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=37]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=38]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=43]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=44]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=46]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=47]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=49]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=50]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=52]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=53]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=55]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=56]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=58]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=59]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=61]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=62]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=64]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=65]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=67]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=68]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=70]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=71]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=76]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=77]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=79]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=80]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=82]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=83]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=85]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=86]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=88]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=89]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=91]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=92]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=94]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=95]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[sub_resource type="NavigationPolygon" id=97]
+
+vertices = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+polygons = [ PoolIntArray( 0, 1, 2, 3 ) ]
+outlines = [ PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 ) ]
+
+[sub_resource type="OccluderPolygon2D" id=98]
+
+closed = true
+cull_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="BlueDungeonGenerator" type="Node2D"]
+
+[node name="RogueDungeon0" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+region_enabled = true
+region_rect = Rect2( 0, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon0" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon0/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon0" index="1"]
+
+navpoly = SubResource( 1 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon0" index="2"]
+
+occluder = SubResource( 2 )
+light_mask = 1
+
+[node name="RogueDungeon1" type="Sprite" parent="." index="1"]
+
+position = Vector2( 16, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 1
+region_enabled = true
+region_rect = Rect2( 16, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon1" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon1/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon1" index="1"]
+
+navpoly = SubResource( 4 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon1" index="2"]
+
+occluder = SubResource( 5 )
+light_mask = 1
+
+[node name="RogueDungeon2" type="Sprite" parent="." index="2"]
+
+position = Vector2( 32, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 2
+region_enabled = true
+region_rect = Rect2( 32, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon2" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon2/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon2" index="1"]
+
+navpoly = SubResource( 121 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon2" index="2"]
+
+occluder = SubResource( 122 )
+light_mask = 1
+
+[node name="RogueDungeon3" type="Sprite" parent="." index="3"]
+
+position = Vector2( 48, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 3
+region_enabled = true
+region_rect = Rect2( 48, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon3" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon3/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon3" index="1"]
+
+navpoly = SubResource( 154 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon3" index="2"]
+
+occluder = SubResource( 155 )
+light_mask = 1
+
+[node name="RogueDungeon4" type="Sprite" parent="." index="4"]
+
+position = Vector2( 64, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 4
+region_enabled = true
+region_rect = Rect2( 64, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon4" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon4/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon4" index="1"]
+
+navpoly = SubResource( 187 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon4" index="2"]
+
+occluder = SubResource( 188 )
+light_mask = 1
+
+[node name="RogueDungeon5" type="Sprite" parent="." index="5"]
+
+position = Vector2( 80, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 5
+region_enabled = true
+region_rect = Rect2( 80, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon5" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon5/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon5" index="1"]
+
+navpoly = SubResource( 220 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon5" index="2"]
+
+occluder = SubResource( 221 )
+light_mask = 1
+
+[node name="RogueDungeon6" type="Sprite" parent="." index="6"]
+
+position = Vector2( 96, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 6
+region_enabled = true
+region_rect = Rect2( 96, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon6" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon6/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon6" index="1"]
+
+navpoly = SubResource( 253 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon6" index="2"]
+
+occluder = SubResource( 254 )
+light_mask = 1
+
+[node name="RogueDungeon7" type="Sprite" parent="." index="7"]
+
+position = Vector2( 112, 0 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 7
+region_enabled = true
+region_rect = Rect2( 112, 0, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon7" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon7/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon7" index="1"]
+
+navpoly = SubResource( 286 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon7" index="2"]
+
+occluder = SubResource( 287 )
+light_mask = 1
+
+[node name="RogueDungeon8" type="Sprite" parent="." index="8"]
+
+position = Vector2( 0, 16 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 8
+region_enabled = true
+region_rect = Rect2( 0, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon8" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon8/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon8" index="1"]
+
+navpoly = SubResource( 319 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon8" index="2"]
+
+occluder = SubResource( 320 )
+light_mask = 1
+
+[node name="RogueDungeon9" type="Sprite" parent="." index="9"]
+
+position = Vector2( 16, 16 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 9
+region_enabled = true
+region_rect = Rect2( 16, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon9" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon9/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon9" index="1"]
+
+navpoly = SubResource( 352 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon9" index="2"]
+
+occluder = SubResource( 353 )
+light_mask = 1
+
+[node name="RogueDungeon10" type="Sprite" parent="." index="10"]
+
+position = Vector2( 32, 16 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 10
+region_enabled = true
+region_rect = Rect2( 32, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon10" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon10/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon10" index="1"]
+
+navpoly = SubResource( 7 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon10" index="2"]
+
+occluder = SubResource( 8 )
+light_mask = 1
+
+[node name="RogueDungeon11" type="Sprite" parent="." index="11"]
+
+position = Vector2( 48, 16 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 11
+region_enabled = true
+region_rect = Rect2( 48, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon11" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon11/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon11" index="1"]
+
+navpoly = SubResource( 40 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon11" index="2"]
+
+occluder = SubResource( 41 )
+light_mask = 1
+
+[node name="RogueDungeon12" type="Sprite" parent="." index="12"]
+
+position = Vector2( 64, 16 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 12
+region_enabled = true
+region_rect = Rect2( 64, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon12" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon12/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon12" index="1"]
+
+navpoly = SubResource( 73 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon12" index="2"]
+
+occluder = SubResource( 74 )
+light_mask = 1
+
+[node name="RogueDungeon13" type="Sprite" parent="." index="13"]
+
+position = Vector2( 80, 16 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 13
+region_enabled = true
+region_rect = Rect2( 80, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon13" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon13/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon13" index="1"]
+
+navpoly = SubResource( 100 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon13" index="2"]
+
+occluder = SubResource( 101 )
+light_mask = 1
+
+[node name="RogueDungeon14" type="Sprite" parent="." index="14"]
+
+position = Vector2( 96, 16 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 14
+region_enabled = true
+region_rect = Rect2( 96, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon14" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon14/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon14" index="1"]
+
+navpoly = SubResource( 103 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon14" index="2"]
+
+occluder = SubResource( 104 )
+light_mask = 1
+
+[node name="RogueDungeon15" type="Sprite" parent="." index="15"]
+
+position = Vector2( 112, 16 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 15
+region_enabled = true
+region_rect = Rect2( 112, 16, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon15" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon15/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon15" index="1"]
+
+navpoly = SubResource( 106 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon15" index="2"]
+
+occluder = SubResource( 107 )
+light_mask = 1
+
+[node name="RogueDungeon16" type="Sprite" parent="." index="16"]
+
+position = Vector2( 0, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 16
+region_enabled = true
+region_rect = Rect2( 0, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon16" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon16/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon16" index="1"]
+
+navpoly = SubResource( 109 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon16" index="2"]
+
+occluder = SubResource( 110 )
+light_mask = 1
+
+[node name="RogueDungeon17" type="Sprite" parent="." index="17"]
+
+position = Vector2( 16, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 17
+region_enabled = true
+region_rect = Rect2( 16, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon17" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon17/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon17" index="1"]
+
+navpoly = SubResource( 112 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon17" index="2"]
+
+occluder = SubResource( 113 )
+light_mask = 1
+
+[node name="RogueDungeon18" type="Sprite" parent="." index="18"]
+
+position = Vector2( 32, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 18
+region_enabled = true
+region_rect = Rect2( 32, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon18" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon18/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon18" index="1"]
+
+navpoly = SubResource( 115 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon18" index="2"]
+
+occluder = SubResource( 116 )
+light_mask = 1
+
+[node name="RogueDungeon19" type="Sprite" parent="." index="19"]
+
+position = Vector2( 48, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 19
+region_enabled = true
+region_rect = Rect2( 48, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon19" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon19/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon19" index="1"]
+
+navpoly = SubResource( 118 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon19" index="2"]
+
+occluder = SubResource( 119 )
+light_mask = 1
+
+[node name="RogueDungeon20" type="Sprite" parent="." index="20"]
+
+position = Vector2( 64, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 20
+region_enabled = true
+region_rect = Rect2( 64, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon20" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon20/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon20" index="1"]
+
+navpoly = SubResource( 124 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon20" index="2"]
+
+occluder = SubResource( 125 )
+light_mask = 1
+
+[node name="RogueDungeon21" type="Sprite" parent="." index="21"]
+
+position = Vector2( 80, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 21
+region_enabled = true
+region_rect = Rect2( 80, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon21" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon21/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon21" index="1"]
+
+navpoly = SubResource( 127 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon21" index="2"]
+
+occluder = SubResource( 128 )
+light_mask = 1
+
+[node name="RogueDungeon22" type="Sprite" parent="." index="22"]
+
+position = Vector2( 96, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 22
+region_enabled = true
+region_rect = Rect2( 96, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon22" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon22/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon22" index="1"]
+
+navpoly = SubResource( 130 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon22" index="2"]
+
+occluder = SubResource( 131 )
+light_mask = 1
+
+[node name="RogueDungeon23" type="Sprite" parent="." index="23"]
+
+position = Vector2( 112, 32 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 23
+region_enabled = true
+region_rect = Rect2( 112, 32, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon23" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon23/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon23" index="1"]
+
+navpoly = SubResource( 133 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon23" index="2"]
+
+occluder = SubResource( 134 )
+light_mask = 1
+
+[node name="RogueDungeon24" type="Sprite" parent="." index="24"]
+
+position = Vector2( 0, 48 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 24
+region_enabled = true
+region_rect = Rect2( 0, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon24" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon24/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon24" index="1"]
+
+navpoly = SubResource( 136 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon24" index="2"]
+
+occluder = SubResource( 137 )
+light_mask = 1
+
+[node name="RogueDungeon25" type="Sprite" parent="." index="25"]
+
+position = Vector2( 16, 48 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 25
+region_enabled = true
+region_rect = Rect2( 16, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon25" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon25/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon25" index="1"]
+
+navpoly = SubResource( 139 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon25" index="2"]
+
+occluder = SubResource( 140 )
+light_mask = 1
+
+[node name="RogueDungeon26" type="Sprite" parent="." index="26"]
+
+position = Vector2( 32, 48 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 26
+region_enabled = true
+region_rect = Rect2( 32, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon26" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon26/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon26" index="1"]
+
+navpoly = SubResource( 142 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon26" index="2"]
+
+occluder = SubResource( 143 )
+light_mask = 1
+
+[node name="RogueDungeon27" type="Sprite" parent="." index="27"]
+
+position = Vector2( 48, 48 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 27
+region_enabled = true
+region_rect = Rect2( 48, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon27" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon27/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon27" index="1"]
+
+navpoly = SubResource( 145 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon27" index="2"]
+
+occluder = SubResource( 146 )
+light_mask = 1
+
+[node name="RogueDungeon28" type="Sprite" parent="." index="28"]
+
+position = Vector2( 64, 48 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 28
+region_enabled = true
+region_rect = Rect2( 64, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon28" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon28/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon28" index="1"]
+
+navpoly = SubResource( 148 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon28" index="2"]
+
+occluder = SubResource( 149 )
+light_mask = 1
+
+[node name="RogueDungeon29" type="Sprite" parent="." index="29"]
+
+position = Vector2( 80, 48 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 29
+region_enabled = true
+region_rect = Rect2( 80, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon29" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon29/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon29" index="1"]
+
+navpoly = SubResource( 151 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon29" index="2"]
+
+occluder = SubResource( 152 )
+light_mask = 1
+
+[node name="RogueDungeon30" type="Sprite" parent="." index="30"]
+
+position = Vector2( 96, 48 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 30
+region_enabled = true
+region_rect = Rect2( 96, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon30" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon30/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon30" index="1"]
+
+navpoly = SubResource( 157 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon30" index="2"]
+
+occluder = SubResource( 158 )
+light_mask = 1
+
+[node name="RogueDungeon31" type="Sprite" parent="." index="31"]
+
+position = Vector2( 112, 48 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 31
+region_enabled = true
+region_rect = Rect2( 112, 48, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon31" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon31/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon31" index="1"]
+
+navpoly = SubResource( 160 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon31" index="2"]
+
+occluder = SubResource( 161 )
+light_mask = 1
+
+[node name="RogueDungeon32" type="Sprite" parent="." index="32"]
+
+position = Vector2( 0, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 32
+region_enabled = true
+region_rect = Rect2( 0, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon32" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon32/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon32" index="1"]
+
+navpoly = SubResource( 163 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon32" index="2"]
+
+occluder = SubResource( 164 )
+light_mask = 1
+
+[node name="RogueDungeon33" type="Sprite" parent="." index="33"]
+
+position = Vector2( 16, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 33
+region_enabled = true
+region_rect = Rect2( 16, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon33" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon33/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon33" index="1"]
+
+navpoly = SubResource( 166 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon33" index="2"]
+
+occluder = SubResource( 167 )
+light_mask = 1
+
+[node name="RogueDungeon34" type="Sprite" parent="." index="34"]
+
+position = Vector2( 32, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 34
+region_enabled = true
+region_rect = Rect2( 32, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon34" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon34/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon34" index="1"]
+
+navpoly = SubResource( 169 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon34" index="2"]
+
+occluder = SubResource( 170 )
+light_mask = 1
+
+[node name="RogueDungeon35" type="Sprite" parent="." index="35"]
+
+position = Vector2( 48, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 35
+region_enabled = true
+region_rect = Rect2( 48, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon35" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon35/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon35" index="1"]
+
+navpoly = SubResource( 172 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon35" index="2"]
+
+occluder = SubResource( 173 )
+light_mask = 1
+
+[node name="RogueDungeon36" type="Sprite" parent="." index="36"]
+
+position = Vector2( 64, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 36
+region_enabled = true
+region_rect = Rect2( 64, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon36" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon36/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon36" index="1"]
+
+navpoly = SubResource( 175 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon36" index="2"]
+
+occluder = SubResource( 176 )
+light_mask = 1
+
+[node name="RogueDungeon37" type="Sprite" parent="." index="37"]
+
+position = Vector2( 80, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 37
+region_enabled = true
+region_rect = Rect2( 80, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon37" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon37/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon37" index="1"]
+
+navpoly = SubResource( 178 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon37" index="2"]
+
+occluder = SubResource( 179 )
+light_mask = 1
+
+[node name="RogueDungeon38" type="Sprite" parent="." index="38"]
+
+position = Vector2( 96, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 38
+region_enabled = true
+region_rect = Rect2( 96, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon38" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon38/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon38" index="1"]
+
+navpoly = SubResource( 181 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon38" index="2"]
+
+occluder = SubResource( 182 )
+light_mask = 1
+
+[node name="RogueDungeon39" type="Sprite" parent="." index="39"]
+
+position = Vector2( 112, 64 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 39
+region_enabled = true
+region_rect = Rect2( 112, 64, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon39" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon39/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon39" index="1"]
+
+navpoly = SubResource( 184 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon39" index="2"]
+
+occluder = SubResource( 185 )
+light_mask = 1
+
+[node name="RogueDungeon40" type="Sprite" parent="." index="40"]
+
+position = Vector2( 0, 80 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 40
+region_enabled = true
+region_rect = Rect2( 0, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon40" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon40/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon40" index="1"]
+
+navpoly = SubResource( 190 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon40" index="2"]
+
+occluder = SubResource( 191 )
+light_mask = 1
+
+[node name="RogueDungeon41" type="Sprite" parent="." index="41"]
+
+position = Vector2( 16, 80 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 41
+region_enabled = true
+region_rect = Rect2( 16, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon41" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon41/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon41" index="1"]
+
+navpoly = SubResource( 193 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon41" index="2"]
+
+occluder = SubResource( 194 )
+light_mask = 1
+
+[node name="RogueDungeon42" type="Sprite" parent="." index="42"]
+
+position = Vector2( 32, 80 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 42
+region_enabled = true
+region_rect = Rect2( 32, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon42" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon42/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon42" index="1"]
+
+navpoly = SubResource( 196 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon42" index="2"]
+
+occluder = SubResource( 197 )
+light_mask = 1
+
+[node name="RogueDungeon43" type="Sprite" parent="." index="43"]
+
+position = Vector2( 48, 80 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 43
+region_enabled = true
+region_rect = Rect2( 48, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon43" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon43/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon43" index="1"]
+
+navpoly = SubResource( 199 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon43" index="2"]
+
+occluder = SubResource( 200 )
+light_mask = 1
+
+[node name="RogueDungeon44" type="Sprite" parent="." index="44"]
+
+position = Vector2( 64, 80 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 44
+region_enabled = true
+region_rect = Rect2( 64, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon44" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon44/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon44" index="1"]
+
+navpoly = SubResource( 202 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon44" index="2"]
+
+occluder = SubResource( 203 )
+light_mask = 1
+
+[node name="RogueDungeon45" type="Sprite" parent="." index="45"]
+
+position = Vector2( 80, 80 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 45
+region_enabled = true
+region_rect = Rect2( 80, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon45" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon45/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon45" index="1"]
+
+navpoly = SubResource( 205 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon45" index="2"]
+
+occluder = SubResource( 206 )
+light_mask = 1
+
+[node name="RogueDungeon46" type="Sprite" parent="." index="46"]
+
+position = Vector2( 96, 80 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 46
+region_enabled = true
+region_rect = Rect2( 96, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon46" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon46/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon46" index="1"]
+
+navpoly = SubResource( 208 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon46" index="2"]
+
+occluder = SubResource( 209 )
+light_mask = 1
+
+[node name="RogueDungeon47" type="Sprite" parent="." index="47"]
+
+position = Vector2( 112, 80 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 47
+region_enabled = true
+region_rect = Rect2( 112, 80, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon47" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon47/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon47" index="1"]
+
+navpoly = SubResource( 211 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon47" index="2"]
+
+occluder = SubResource( 212 )
+light_mask = 1
+
+[node name="RogueDungeon48" type="Sprite" parent="." index="48"]
+
+position = Vector2( 0, 96 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 48
+region_enabled = true
+region_rect = Rect2( 0, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon48" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon48/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon48" index="1"]
+
+navpoly = SubResource( 214 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon48" index="2"]
+
+occluder = SubResource( 215 )
+light_mask = 1
+
+[node name="RogueDungeon49" type="Sprite" parent="." index="49"]
+
+position = Vector2( 16, 96 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 49
+region_enabled = true
+region_rect = Rect2( 16, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon49" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon49/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon49" index="1"]
+
+navpoly = SubResource( 217 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon49" index="2"]
+
+occluder = SubResource( 218 )
+light_mask = 1
+
+[node name="RogueDungeon50" type="Sprite" parent="." index="50"]
+
+position = Vector2( 32, 96 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 50
+region_enabled = true
+region_rect = Rect2( 32, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon50" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon50/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon50" index="1"]
+
+navpoly = SubResource( 223 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon50" index="2"]
+
+occluder = SubResource( 224 )
+light_mask = 1
+
+[node name="RogueDungeon51" type="Sprite" parent="." index="51"]
+
+position = Vector2( 48, 96 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 51
+region_enabled = true
+region_rect = Rect2( 48, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon51" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon51/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon51" index="1"]
+
+navpoly = SubResource( 226 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon51" index="2"]
+
+occluder = SubResource( 227 )
+light_mask = 1
+
+[node name="RogueDungeon52" type="Sprite" parent="." index="52"]
+
+position = Vector2( 64, 96 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 52
+region_enabled = true
+region_rect = Rect2( 64, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon52" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon52/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon52" index="1"]
+
+navpoly = SubResource( 229 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon52" index="2"]
+
+occluder = SubResource( 230 )
+light_mask = 1
+
+[node name="RogueDungeon53" type="Sprite" parent="." index="53"]
+
+position = Vector2( 80, 96 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 53
+region_enabled = true
+region_rect = Rect2( 80, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon53" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon53/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon53" index="1"]
+
+navpoly = SubResource( 232 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon53" index="2"]
+
+occluder = SubResource( 233 )
+light_mask = 1
+
+[node name="RogueDungeon54" type="Sprite" parent="." index="54"]
+
+position = Vector2( 96, 96 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 54
+region_enabled = true
+region_rect = Rect2( 96, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon54" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon54/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon54" index="1"]
+
+navpoly = SubResource( 235 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon54" index="2"]
+
+occluder = SubResource( 236 )
+light_mask = 1
+
+[node name="RogueDungeon55" type="Sprite" parent="." index="55"]
+
+position = Vector2( 112, 96 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 55
+region_enabled = true
+region_rect = Rect2( 112, 96, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon55" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon55/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon55" index="1"]
+
+navpoly = SubResource( 238 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon55" index="2"]
+
+occluder = SubResource( 239 )
+light_mask = 1
+
+[node name="RogueDungeon56" type="Sprite" parent="." index="56"]
+
+position = Vector2( 0, 112 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 56
+region_enabled = true
+region_rect = Rect2( 0, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon56" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon56/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon56" index="1"]
+
+navpoly = SubResource( 241 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon56" index="2"]
+
+occluder = SubResource( 242 )
+light_mask = 1
+
+[node name="RogueDungeon57" type="Sprite" parent="." index="57"]
+
+position = Vector2( 16, 112 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 57
+region_enabled = true
+region_rect = Rect2( 16, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon57" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon57/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon57" index="1"]
+
+navpoly = SubResource( 244 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon57" index="2"]
+
+occluder = SubResource( 245 )
+light_mask = 1
+
+[node name="RogueDungeon58" type="Sprite" parent="." index="58"]
+
+position = Vector2( 32, 112 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 58
+region_enabled = true
+region_rect = Rect2( 32, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon58" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon58/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon58" index="1"]
+
+navpoly = SubResource( 247 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon58" index="2"]
+
+occluder = SubResource( 248 )
+light_mask = 1
+
+[node name="RogueDungeon59" type="Sprite" parent="." index="59"]
+
+position = Vector2( 48, 112 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 59
+region_enabled = true
+region_rect = Rect2( 48, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon59" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon59/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon59" index="1"]
+
+navpoly = SubResource( 250 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon59" index="2"]
+
+occluder = SubResource( 251 )
+light_mask = 1
+
+[node name="RogueDungeon60" type="Sprite" parent="." index="60"]
+
+position = Vector2( 64, 112 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 60
+region_enabled = true
+region_rect = Rect2( 64, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon60" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon60/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon60" index="1"]
+
+navpoly = SubResource( 256 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon60" index="2"]
+
+occluder = SubResource( 257 )
+light_mask = 1
+
+[node name="RogueDungeon61" type="Sprite" parent="." index="61"]
+
+position = Vector2( 80, 112 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 61
+region_enabled = true
+region_rect = Rect2( 80, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon61" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon61/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon61" index="1"]
+
+navpoly = SubResource( 259 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon61" index="2"]
+
+occluder = SubResource( 260 )
+light_mask = 1
+
+[node name="RogueDungeon62" type="Sprite" parent="." index="62"]
+
+position = Vector2( 96, 112 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 62
+region_enabled = true
+region_rect = Rect2( 96, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon62" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon62/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon62" index="1"]
+
+navpoly = SubResource( 262 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon62" index="2"]
+
+occluder = SubResource( 263 )
+light_mask = 1
+
+[node name="RogueDungeon63" type="Sprite" parent="." index="63"]
+
+position = Vector2( 112, 112 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 63
+region_enabled = true
+region_rect = Rect2( 112, 112, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon63" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon63/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon63" index="1"]
+
+navpoly = SubResource( 265 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon63" index="2"]
+
+occluder = SubResource( 266 )
+light_mask = 1
+
+[node name="RogueDungeon64" type="Sprite" parent="." index="64"]
+
+position = Vector2( 0, 128 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 64
+region_enabled = true
+region_rect = Rect2( 0, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon64" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon64/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon64" index="1"]
+
+navpoly = SubResource( 268 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon64" index="2"]
+
+occluder = SubResource( 269 )
+light_mask = 1
+
+[node name="RogueDungeon65" type="Sprite" parent="." index="65"]
+
+position = Vector2( 16, 128 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 65
+region_enabled = true
+region_rect = Rect2( 16, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon65" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon65/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon65" index="1"]
+
+navpoly = SubResource( 271 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon65" index="2"]
+
+occluder = SubResource( 272 )
+light_mask = 1
+
+[node name="RogueDungeon66" type="Sprite" parent="." index="66"]
+
+position = Vector2( 32, 128 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 66
+region_enabled = true
+region_rect = Rect2( 32, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon66" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon66/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon66" index="1"]
+
+navpoly = SubResource( 274 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon66" index="2"]
+
+occluder = SubResource( 275 )
+light_mask = 1
+
+[node name="RogueDungeon67" type="Sprite" parent="." index="67"]
+
+position = Vector2( 48, 128 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 67
+region_enabled = true
+region_rect = Rect2( 48, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon67" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon67/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon67" index="1"]
+
+navpoly = SubResource( 277 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon67" index="2"]
+
+occluder = SubResource( 278 )
+light_mask = 1
+
+[node name="RogueDungeon68" type="Sprite" parent="." index="68"]
+
+position = Vector2( 64, 128 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 68
+region_enabled = true
+region_rect = Rect2( 64, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon68" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon68/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon68" index="1"]
+
+navpoly = SubResource( 280 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon68" index="2"]
+
+occluder = SubResource( 281 )
+light_mask = 1
+
+[node name="RogueDungeon69" type="Sprite" parent="." index="69"]
+
+position = Vector2( 80, 128 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 69
+region_enabled = true
+region_rect = Rect2( 80, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon69" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon69/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon69" index="1"]
+
+navpoly = SubResource( 283 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon69" index="2"]
+
+occluder = SubResource( 284 )
+light_mask = 1
+
+[node name="RogueDungeon70" type="Sprite" parent="." index="70"]
+
+position = Vector2( 96, 128 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 70
+region_enabled = true
+region_rect = Rect2( 96, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon70" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon70/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon70" index="1"]
+
+navpoly = SubResource( 289 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon70" index="2"]
+
+occluder = SubResource( 290 )
+light_mask = 1
+
+[node name="RogueDungeon71" type="Sprite" parent="." index="71"]
+
+position = Vector2( 112, 128 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 71
+region_enabled = true
+region_rect = Rect2( 112, 128, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon71" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon71/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon71" index="1"]
+
+navpoly = SubResource( 292 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon71" index="2"]
+
+occluder = SubResource( 293 )
+light_mask = 1
+
+[node name="RogueDungeon72" type="Sprite" parent="." index="72"]
+
+position = Vector2( 0, 144 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 72
+region_enabled = true
+region_rect = Rect2( 0, 144, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon72" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon72/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon72" index="1"]
+
+navpoly = SubResource( 295 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon72" index="2"]
+
+occluder = SubResource( 296 )
+light_mask = 1
+
+[node name="RogueDungeon73" type="Sprite" parent="." index="73"]
+
+position = Vector2( 16, 144 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 73
+region_enabled = true
+region_rect = Rect2( 16, 144, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon73" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon73/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon73" index="1"]
+
+navpoly = SubResource( 298 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon73" index="2"]
+
+occluder = SubResource( 299 )
+light_mask = 1
+
+[node name="RogueDungeon74" type="Sprite" parent="." index="74"]
+
+position = Vector2( 32, 144 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 74
+region_enabled = true
+region_rect = Rect2( 32, 144, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon74" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon74/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon74" index="1"]
+
+navpoly = SubResource( 301 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon74" index="2"]
+
+occluder = SubResource( 302 )
+light_mask = 1
+
+[node name="RogueDungeon75" type="Sprite" parent="." index="75"]
+
+position = Vector2( 48, 144 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 75
+region_enabled = true
+region_rect = Rect2( 48, 144, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon75" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon75/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon75" index="1"]
+
+navpoly = SubResource( 304 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon75" index="2"]
+
+occluder = SubResource( 305 )
+light_mask = 1
+
+[node name="RogueDungeon76" type="Sprite" parent="." index="76"]
+
+position = Vector2( 64, 144 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 76
+region_enabled = true
+region_rect = Rect2( 64, 144, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon76" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon76/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon76" index="1"]
+
+navpoly = SubResource( 307 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon76" index="2"]
+
+occluder = SubResource( 308 )
+light_mask = 1
+
+[node name="RogueDungeon77" type="Sprite" parent="." index="77"]
+
+position = Vector2( 80, 144 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 77
+region_enabled = true
+region_rect = Rect2( 80, 144, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon77" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon77/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon77" index="1"]
+
+navpoly = SubResource( 310 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon77" index="2"]
+
+occluder = SubResource( 311 )
+light_mask = 1
+
+[node name="RogueDungeon78" type="Sprite" parent="." index="78"]
+
+position = Vector2( 96, 144 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 78
+region_enabled = true
+region_rect = Rect2( 96, 144, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon78" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon78/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon78" index="1"]
+
+navpoly = SubResource( 313 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon78" index="2"]
+
+occluder = SubResource( 314 )
+light_mask = 1
+
+[node name="RogueDungeon79" type="Sprite" parent="." index="79"]
+
+position = Vector2( 112, 144 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 79
+region_enabled = true
+region_rect = Rect2( 112, 144, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon79" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon79/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon79" index="1"]
+
+navpoly = SubResource( 316 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon79" index="2"]
+
+occluder = SubResource( 317 )
+light_mask = 1
+
+[node name="RogueDungeon80" type="Sprite" parent="." index="80"]
+
+position = Vector2( 0, 160 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 80
+region_enabled = true
+region_rect = Rect2( 0, 160, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon80" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon80/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon80" index="1"]
+
+navpoly = SubResource( 322 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon80" index="2"]
+
+occluder = SubResource( 323 )
+light_mask = 1
+
+[node name="RogueDungeon81" type="Sprite" parent="." index="81"]
+
+position = Vector2( 16, 160 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 81
+region_enabled = true
+region_rect = Rect2( 16, 160, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon81" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon81/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon81" index="1"]
+
+navpoly = SubResource( 325 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon81" index="2"]
+
+occluder = SubResource( 326 )
+light_mask = 1
+
+[node name="RogueDungeon82" type="Sprite" parent="." index="82"]
+
+position = Vector2( 32, 160 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 82
+region_enabled = true
+region_rect = Rect2( 32, 160, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon82" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon82/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon82" index="1"]
+
+navpoly = SubResource( 328 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon82" index="2"]
+
+occluder = SubResource( 329 )
+light_mask = 1
+
+[node name="RogueDungeon83" type="Sprite" parent="." index="83"]
+
+position = Vector2( 48, 160 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 83
+region_enabled = true
+region_rect = Rect2( 48, 160, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon83" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon83/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon83" index="1"]
+
+navpoly = SubResource( 331 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon83" index="2"]
+
+occluder = SubResource( 332 )
+light_mask = 1
+
+[node name="RogueDungeon84" type="Sprite" parent="." index="84"]
+
+position = Vector2( 64, 160 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 84
+region_enabled = true
+region_rect = Rect2( 64, 160, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon84" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon84/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon84" index="1"]
+
+navpoly = SubResource( 334 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon84" index="2"]
+
+occluder = SubResource( 335 )
+light_mask = 1
+
+[node name="RogueDungeon85" type="Sprite" parent="." index="85"]
+
+position = Vector2( 80, 160 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 85
+region_enabled = true
+region_rect = Rect2( 80, 160, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon85" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon85/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon85" index="1"]
+
+navpoly = SubResource( 337 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon85" index="2"]
+
+occluder = SubResource( 338 )
+light_mask = 1
+
+[node name="RogueDungeon86" type="Sprite" parent="." index="86"]
+
+position = Vector2( 96, 160 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 86
+region_enabled = true
+region_rect = Rect2( 96, 160, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon86" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon86/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon86" index="1"]
+
+navpoly = SubResource( 340 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon86" index="2"]
+
+occluder = SubResource( 341 )
+light_mask = 1
+
+[node name="RogueDungeon87" type="Sprite" parent="." index="87"]
+
+position = Vector2( 112, 160 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 87
+region_enabled = true
+region_rect = Rect2( 112, 160, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon87" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon87/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon87" index="1"]
+
+navpoly = SubResource( 343 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon87" index="2"]
+
+occluder = SubResource( 344 )
+light_mask = 1
+
+[node name="RogueDungeon88" type="Sprite" parent="." index="88"]
+
+position = Vector2( 0, 176 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 88
+region_enabled = true
+region_rect = Rect2( 0, 176, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon88" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon88/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon88" index="1"]
+
+navpoly = SubResource( 346 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon88" index="2"]
+
+occluder = SubResource( 347 )
+light_mask = 1
+
+[node name="RogueDungeon89" type="Sprite" parent="." index="89"]
+
+position = Vector2( 16, 176 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 89
+region_enabled = true
+region_rect = Rect2( 16, 176, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon89" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon89/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon89" index="1"]
+
+navpoly = SubResource( 349 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon89" index="2"]
+
+occluder = SubResource( 350 )
+light_mask = 1
+
+[node name="RogueDungeon90" type="Sprite" parent="." index="90"]
+
+position = Vector2( 32, 176 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 90
+region_enabled = true
+region_rect = Rect2( 32, 176, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon90" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon90/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon90" index="1"]
+
+navpoly = SubResource( 355 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon90" index="2"]
+
+occluder = SubResource( 356 )
+light_mask = 1
+
+[node name="RogueDungeon91" type="Sprite" parent="." index="91"]
+
+position = Vector2( 48, 176 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 91
+region_enabled = true
+region_rect = Rect2( 48, 176, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon91" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon91/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon91" index="1"]
+
+navpoly = SubResource( 358 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon91" index="2"]
+
+occluder = SubResource( 359 )
+light_mask = 1
+
+[node name="RogueDungeon92" type="Sprite" parent="." index="92"]
+
+position = Vector2( 64, 176 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 92
+region_enabled = true
+region_rect = Rect2( 64, 176, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon92" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon92/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon92" index="1"]
+
+navpoly = SubResource( 361 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon92" index="2"]
+
+occluder = SubResource( 362 )
+light_mask = 1
+
+[node name="RogueDungeon93" type="Sprite" parent="." index="93"]
+
+position = Vector2( 80, 176 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 93
+region_enabled = true
+region_rect = Rect2( 80, 176, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon93" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon93/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon93" index="1"]
+
+navpoly = SubResource( 364 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon93" index="2"]
+
+occluder = SubResource( 365 )
+light_mask = 1
+
+[node name="RogueDungeon94" type="Sprite" parent="." index="94"]
+
+position = Vector2( 96, 176 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 94
+region_enabled = true
+region_rect = Rect2( 96, 176, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon94" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon94/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon94" index="1"]
+
+navpoly = SubResource( 367 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon94" index="2"]
+
+occluder = SubResource( 368 )
+light_mask = 1
+
+[node name="RogueDungeon95" type="Sprite" parent="." index="95"]
+
+position = Vector2( 112, 176 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 95
+region_enabled = true
+region_rect = Rect2( 112, 176, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon95" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon95/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon95" index="1"]
+
+navpoly = SubResource( 370 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon95" index="2"]
+
+occluder = SubResource( 371 )
+light_mask = 1
+
+[node name="RogueDungeon96" type="Sprite" parent="." index="96"]
+
+position = Vector2( 0, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 96
+region_enabled = true
+region_rect = Rect2( 0, 192, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon96" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon96/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon96" index="1"]
+
+navpoly = SubResource( 373 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon96" index="2"]
+
+occluder = SubResource( 374 )
+light_mask = 1
+
+[node name="RogueDungeon97" type="Sprite" parent="." index="97"]
+
+position = Vector2( 16, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 97
+region_enabled = true
+region_rect = Rect2( 16, 192, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon97" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon97/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon97" index="1"]
+
+navpoly = SubResource( 376 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon97" index="2"]
+
+occluder = SubResource( 377 )
+light_mask = 1
+
+[node name="RogueDungeon98" type="Sprite" parent="." index="98"]
+
+position = Vector2( 32, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 98
+region_enabled = true
+region_rect = Rect2( 32, 192, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon98" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon98/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon98" index="1"]
+
+navpoly = SubResource( 379 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon98" index="2"]
+
+occluder = SubResource( 380 )
+light_mask = 1
+
+[node name="RogueDungeon99" type="Sprite" parent="." index="99"]
+
+position = Vector2( 48, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 99
+region_enabled = true
+region_rect = Rect2( 48, 192, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon99" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon99/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon99" index="1"]
+
+navpoly = SubResource( 382 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon99" index="2"]
+
+occluder = SubResource( 383 )
+light_mask = 1
+
+[node name="RogueDungeon100" type="Sprite" parent="." index="100"]
+
+position = Vector2( 64, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 100
+region_enabled = true
+region_rect = Rect2( 64, 192, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon100" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon100/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon100" index="1"]
+
+navpoly = SubResource( 10 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon100" index="2"]
+
+occluder = SubResource( 11 )
+light_mask = 1
+
+[node name="RogueDungeon101" type="Sprite" parent="." index="101"]
+
+position = Vector2( 80, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 101
+region_enabled = true
+region_rect = Rect2( 80, 192, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon101" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon101/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon101" index="1"]
+
+navpoly = SubResource( 13 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon101" index="2"]
+
+occluder = SubResource( 14 )
+light_mask = 1
+
+[node name="RogueDungeon102" type="Sprite" parent="." index="102"]
+
+position = Vector2( 96, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 102
+region_enabled = true
+region_rect = Rect2( 96, 192, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon102" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon102/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon102" index="1"]
+
+navpoly = SubResource( 16 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon102" index="2"]
+
+occluder = SubResource( 17 )
+light_mask = 1
+
+[node name="RogueDungeon103" type="Sprite" parent="." index="103"]
+
+position = Vector2( 112, 192 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 103
+region_enabled = true
+region_rect = Rect2( 112, 192, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon103" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon103/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon103" index="1"]
+
+navpoly = SubResource( 19 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon103" index="2"]
+
+occluder = SubResource( 20 )
+light_mask = 1
+
+[node name="RogueDungeon104" type="Sprite" parent="." index="104"]
+
+position = Vector2( 0, 208 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 104
+region_enabled = true
+region_rect = Rect2( 0, 208, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon104" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon104/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon104" index="1"]
+
+navpoly = SubResource( 22 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon104" index="2"]
+
+occluder = SubResource( 23 )
+light_mask = 1
+
+[node name="RogueDungeon105" type="Sprite" parent="." index="105"]
+
+position = Vector2( 16, 208 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 105
+region_enabled = true
+region_rect = Rect2( 16, 208, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon105" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon105/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon105" index="1"]
+
+navpoly = SubResource( 25 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon105" index="2"]
+
+occluder = SubResource( 26 )
+light_mask = 1
+
+[node name="RogueDungeon106" type="Sprite" parent="." index="106"]
+
+position = Vector2( 32, 208 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 106
+region_enabled = true
+region_rect = Rect2( 32, 208, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon106" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon106/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon106" index="1"]
+
+navpoly = SubResource( 28 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon106" index="2"]
+
+occluder = SubResource( 29 )
+light_mask = 1
+
+[node name="RogueDungeon107" type="Sprite" parent="." index="107"]
+
+position = Vector2( 48, 208 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 107
+region_enabled = true
+region_rect = Rect2( 48, 208, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon107" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon107/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon107" index="1"]
+
+navpoly = SubResource( 31 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon107" index="2"]
+
+occluder = SubResource( 32 )
+light_mask = 1
+
+[node name="RogueDungeon108" type="Sprite" parent="." index="108"]
+
+position = Vector2( 64, 208 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 108
+region_enabled = true
+region_rect = Rect2( 64, 208, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon108" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon108/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon108" index="1"]
+
+navpoly = SubResource( 34 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon108" index="2"]
+
+occluder = SubResource( 35 )
+light_mask = 1
+
+[node name="RogueDungeon109" type="Sprite" parent="." index="109"]
+
+position = Vector2( 80, 208 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 109
+region_enabled = true
+region_rect = Rect2( 80, 208, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon109" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon109/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon109" index="1"]
+
+navpoly = SubResource( 37 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon109" index="2"]
+
+occluder = SubResource( 38 )
+light_mask = 1
+
+[node name="RogueDungeon110" type="Sprite" parent="." index="110"]
+
+position = Vector2( 96, 208 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 110
+region_enabled = true
+region_rect = Rect2( 96, 208, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon110" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon110/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon110" index="1"]
+
+navpoly = SubResource( 43 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon110" index="2"]
+
+occluder = SubResource( 44 )
+light_mask = 1
+
+[node name="RogueDungeon111" type="Sprite" parent="." index="111"]
+
+position = Vector2( 112, 208 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 111
+region_enabled = true
+region_rect = Rect2( 112, 208, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon111" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon111/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon111" index="1"]
+
+navpoly = SubResource( 46 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon111" index="2"]
+
+occluder = SubResource( 47 )
+light_mask = 1
+
+[node name="RogueDungeon112" type="Sprite" parent="." index="112"]
+
+position = Vector2( 0, 224 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 112
+region_enabled = true
+region_rect = Rect2( 0, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon112" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon112/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon112" index="1"]
+
+navpoly = SubResource( 49 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon112" index="2"]
+
+occluder = SubResource( 50 )
+light_mask = 1
+
+[node name="RogueDungeon113" type="Sprite" parent="." index="113"]
+
+position = Vector2( 16, 224 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 113
+region_enabled = true
+region_rect = Rect2( 16, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon113" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon113/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon113" index="1"]
+
+navpoly = SubResource( 52 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon113" index="2"]
+
+occluder = SubResource( 53 )
+light_mask = 1
+
+[node name="RogueDungeon114" type="Sprite" parent="." index="114"]
+
+position = Vector2( 32, 224 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 114
+region_enabled = true
+region_rect = Rect2( 32, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon114" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon114/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon114" index="1"]
+
+navpoly = SubResource( 55 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon114" index="2"]
+
+occluder = SubResource( 56 )
+light_mask = 1
+
+[node name="RogueDungeon115" type="Sprite" parent="." index="115"]
+
+position = Vector2( 48, 224 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 115
+region_enabled = true
+region_rect = Rect2( 48, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon115" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon115/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon115" index="1"]
+
+navpoly = SubResource( 58 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon115" index="2"]
+
+occluder = SubResource( 59 )
+light_mask = 1
+
+[node name="RogueDungeon116" type="Sprite" parent="." index="116"]
+
+position = Vector2( 64, 224 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 116
+region_enabled = true
+region_rect = Rect2( 64, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon116" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon116/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon116" index="1"]
+
+navpoly = SubResource( 61 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon116" index="2"]
+
+occluder = SubResource( 62 )
+light_mask = 1
+
+[node name="RogueDungeon117" type="Sprite" parent="." index="117"]
+
+position = Vector2( 80, 224 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 117
+region_enabled = true
+region_rect = Rect2( 80, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon117" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon117/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon117" index="1"]
+
+navpoly = SubResource( 64 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon117" index="2"]
+
+occluder = SubResource( 65 )
+light_mask = 1
+
+[node name="RogueDungeon118" type="Sprite" parent="." index="118"]
+
+position = Vector2( 96, 224 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 118
+region_enabled = true
+region_rect = Rect2( 96, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon118" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon118/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon118" index="1"]
+
+navpoly = SubResource( 67 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon118" index="2"]
+
+occluder = SubResource( 68 )
+light_mask = 1
+
+[node name="RogueDungeon119" type="Sprite" parent="." index="119"]
+
+position = Vector2( 112, 224 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 119
+region_enabled = true
+region_rect = Rect2( 112, 224, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon119" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon119/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon119" index="1"]
+
+navpoly = SubResource( 70 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon119" index="2"]
+
+occluder = SubResource( 71 )
+light_mask = 1
+
+[node name="RogueDungeon120" type="Sprite" parent="." index="120"]
+
+position = Vector2( 0, 240 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 120
+region_enabled = true
+region_rect = Rect2( 0, 240, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon120" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon120/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon120" index="1"]
+
+navpoly = SubResource( 76 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon120" index="2"]
+
+occluder = SubResource( 77 )
+light_mask = 1
+
+[node name="RogueDungeon121" type="Sprite" parent="." index="121"]
+
+position = Vector2( 16, 240 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 121
+region_enabled = true
+region_rect = Rect2( 16, 240, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon121" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon121/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon121" index="1"]
+
+navpoly = SubResource( 79 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon121" index="2"]
+
+occluder = SubResource( 80 )
+light_mask = 1
+
+[node name="RogueDungeon122" type="Sprite" parent="." index="122"]
+
+position = Vector2( 32, 240 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 122
+region_enabled = true
+region_rect = Rect2( 32, 240, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon122" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon122/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon122" index="1"]
+
+navpoly = SubResource( 82 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon122" index="2"]
+
+occluder = SubResource( 83 )
+light_mask = 1
+
+[node name="RogueDungeon123" type="Sprite" parent="." index="123"]
+
+position = Vector2( 48, 240 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 123
+region_enabled = true
+region_rect = Rect2( 48, 240, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon123" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon123/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon123" index="1"]
+
+navpoly = SubResource( 85 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon123" index="2"]
+
+occluder = SubResource( 86 )
+light_mask = 1
+
+[node name="RogueDungeon124" type="Sprite" parent="." index="124"]
+
+position = Vector2( 64, 240 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 124
+region_enabled = true
+region_rect = Rect2( 64, 240, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon124" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon124/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon124" index="1"]
+
+navpoly = SubResource( 88 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon124" index="2"]
+
+occluder = SubResource( 89 )
+light_mask = 1
+
+[node name="RogueDungeon125" type="Sprite" parent="." index="125"]
+
+position = Vector2( 80, 240 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 125
+region_enabled = true
+region_rect = Rect2( 80, 240, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon125" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon125/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon125" index="1"]
+
+navpoly = SubResource( 91 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon125" index="2"]
+
+occluder = SubResource( 92 )
+light_mask = 1
+
+[node name="RogueDungeon126" type="Sprite" parent="." index="126"]
+
+position = Vector2( 96, 240 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 126
+region_enabled = true
+region_rect = Rect2( 96, 240, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon126" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon126/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon126" index="1"]
+
+navpoly = SubResource( 94 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon126" index="2"]
+
+occluder = SubResource( 95 )
+light_mask = 1
+
+[node name="RogueDungeon127" type="Sprite" parent="." index="127"]
+
+position = Vector2( 112, 240 )
+texture = ExtResource( 1 )
+vframes = 16
+hframes = 8
+frame = 127
+region_enabled = true
+region_rect = Rect2( 112, 240, 16, 16 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="RogueDungeon127" index="0"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="RogueDungeon127/StaticBody2D" index="0"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -8, 8, -8, 8, 8, -8, 8 )
+
+[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="RogueDungeon127" index="1"]
+
+navpoly = SubResource( 97 )
+enabled = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="RogueDungeon127" index="2"]
+
+occluder = SubResource( 98 )
+light_mask = 1
+
+

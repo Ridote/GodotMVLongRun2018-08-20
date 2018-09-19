@@ -3,8 +3,9 @@ extends Node2D
 #CHANGE THE DIRECTION FROM THE SOURCE!!!!!
 var boomerangDirection = Vector2(3, 5).normalized()
 
-var speed = 300
+var speed = 250
 var maxSpeed = 600
+var flyingSpeed = 0.35
 
 var target = Vector2(0,0)
 var turnBack = false
@@ -14,6 +15,8 @@ func _ready():
 	$AnimationPlayer.get_animation("spin").set_loop(true)
 	$AnimationPlayer.play("spin")
 	$Timer.start()
+	$Timer.wait_time = flyingSpeed
+	
 func _physics_process(delta):
 	if turnBack:
 		if source:
