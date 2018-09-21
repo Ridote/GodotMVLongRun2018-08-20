@@ -1,6 +1,7 @@
 extends Node2D
 
 var boomerangFactory = load("res://Entities/Skills/Boomerang.tscn")
+var utils = load("res://Entities/Player/PlayerUtils.gd")
 
 #Conf
 export var maxSpeed = 200
@@ -23,8 +24,8 @@ var damaged = false
 var casting = false
 var boomerangOnFlight = false
 
+enum DIRECTION {UP=0, DOWN=1, LEFT=2, RIGHT=3}
 
-enum DIRECTION {UP, DOWN, LEFT, RIGHT}
 var desiredDirection = DIRECTION.DOWN
 var moveDirection = Vector2(0,0)
 
@@ -42,7 +43,12 @@ func _physics_process(delta):
 		processSkills()
 	else:
 		$Rigid.linear_velocity = Vector2(0,0)
-	animate()
+	
+	#Animations are now under another script
+	var nextAnimation = utils.animate($Rigid.linear_velocity, desiredDirection, lastAnimation, $Rigid/Sprite/AnimationPlayer)
+	if nextAnimation != lastAnimation:
+		lastAnimation = nextAnimation
+		$Rigid/Sprite/AnimationPlayer.play(nextAnimation)
 	
 func _input(event):
 	skill1 = Input.is_action_pressed("Skill1")
@@ -107,47 +113,6 @@ func updateInteraction():
 			$Rigid/Interaction.position = Vector2(-16, 0)
 		DIRECTION.RIGHT:
 			$Rigid/Interaction.position = Vector2(16, 0)
-func animate():
-	#if we are moving fast, we are running
-	if (abs($Rigid.linear_velocity.x) > 0.1) or (abs($Rigid.linear_velocity.y) > 0.1):
-		match desiredDirection:
-			DIRECTION.UP:
-				if lastAnimation != "RunningUp":
-					$Rigid/Sprite/AnimationPlayer.play("RunningUp")
-					lastAnimation = "RunningUp"
-			DIRECTION.DOWN:
-				if lastAnimation != "RunningDown":
-					$Rigid/Sprite/AnimationPlayer.play("RunningDown")
-					lastAnimation = "RunningDown"
-			DIRECTION.LEFT:
-				if lastAnimation != "RunningLeft":
-					$Rigid/Sprite/AnimationPlayer.play("RunningLeft")
-					lastAnimation = "RunningLeft"
-			DIRECTION.RIGHT:
-				if lastAnimation != "RunningRight":
-					$Rigid/Sprite/AnimationPlayer.play("RunningRight")
-					lastAnimation = "RunningRight"
-			_:
-				print("Unknown error on player animate")
-				error()
-	#if not, we are idle
-	else:
-		match desiredDirection:
-			DIRECTION.UP:
-				$Rigid/Sprite/AnimationPlayer.play("IdleUp")
-				lastAnimation = "IdleUp"
-			DIRECTION.DOWN:
-				$Rigid/Sprite/AnimationPlayer.play("IdleDown")
-				lastAnimation = "IdleDown"
-			DIRECTION.LEFT:
-				$Rigid/Sprite/AnimationPlayer.play("IdleLeft")
-				lastAnimation = "IdleLeft"
-			DIRECTION.RIGHT:
-				$Rigid/Sprite/AnimationPlayer.play("IdleRight")
-				lastAnimation = "IdleRight"
-			_:
-				print("Unknown error on player animate")
-				error()
 
 func processSkills():
 	if skill1:
