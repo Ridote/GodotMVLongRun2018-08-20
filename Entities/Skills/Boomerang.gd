@@ -9,6 +9,8 @@ var flyingSpeed = 0.35
 
 var target = Vector2(0,0)
 var turnBack = false
+
+#Who throwed the boomerang, to whom it will go back
 var source = null
 
 func _ready():
@@ -23,7 +25,7 @@ func _physics_process(delta):
 			var sourcePos = source.getGlobalPosition()
 			var desiredDirection = (sourcePos-$KBody2D.global_position).normalized()
 			#If this fails it is because we assume boomerangDirection will always be a normalised vector
-			boomerangDirection = Vector2(0.8*boomerangDirection + 0.2*desiredDirection)
+			boomerangDirection = Vector2(0.0*boomerangDirection + 1.0*desiredDirection)
 
 		var collision = $KBody2D.move_and_collide(boomerangDirection*speed*delta)
 		if collision:
@@ -38,12 +40,14 @@ func _physics_process(delta):
 
 		#If we collide, no matter with what, we come back and try to apply damage
 		if collision != null:
+			#First we come back straight without colliding with anybody else
+			$KBody2D.collision_mask = 0x1
 			boomerangDirection = (source.getGlobalPosition()-$KBody2D.global_position).normalized()
 			if collision.get_collider().has_method("receiveDamage"):
 				collision.get_collider().receiveDamage(1.0,0.0)
 
 func receiveDamage(fis, mag, sourcePos):
-	print("This shouldn't happen, enemy colliding with player skills")
+	turnBack = true
 
 func setStartingPosition(pos):
 	$KBody2D.global_position = pos

@@ -55,7 +55,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="KBody2D" type="KinematicBody2D" parent="." index="0"]
 
 input_pickable = false
-collision_layer = 2
+collision_layer = 0
 collision_mask = 92
 collision/safe_margin = 0.08
 _sections_unfolded = [ "Collision", "Transform" ]

@@ -1,7 +1,7 @@
 extends Node2D
 
 var boomerangFactory = load("res://Entities/Skills/Boomerang.tscn")
-var utils = load("res://Entities/Player/PlayerUtils.gd")
+var playerUtils = load("res://Entities/Player/PlayerUtils.gd")
 
 #Conf
 export var maxSpeed = 200
@@ -24,9 +24,7 @@ var damaged = false
 var casting = false
 var boomerangOnFlight = false
 
-enum DIRECTION {UP=0, DOWN=1, LEFT=2, RIGHT=3}
-
-var desiredDirection = DIRECTION.DOWN
+var desiredDirection = utils.DIRECTION.DOWN
 var moveDirection = Vector2(0,0)
 
 var lastAnimation = null
@@ -45,7 +43,7 @@ func _physics_process(delta):
 		$Rigid.linear_velocity = Vector2(0,0)
 	
 	#Animations are now under another script
-	var nextAnimation = utils.animate($Rigid.linear_velocity, desiredDirection, lastAnimation, $Rigid/Sprite/AnimationPlayer)
+	var nextAnimation = playerUtils.animate($Rigid.linear_velocity, desiredDirection, lastAnimation, $Rigid/Sprite/AnimationPlayer)
 	if nextAnimation != lastAnimation:
 		lastAnimation = nextAnimation
 		$Rigid/Sprite/AnimationPlayer.play(nextAnimation)
@@ -86,14 +84,14 @@ func move(delta):
 	#Get the direction we want to move to update the sprite despite of the real velocity
 	if (abs(moveDirection.x) - abs(moveDirection.y)) > 0.1:
 		if moveDirection.x > 0.1:
-			desiredDirection = DIRECTION.RIGHT
+			desiredDirection = utils.DIRECTION.RIGHT
 		elif moveDirection.x < -0.1:
-			desiredDirection = DIRECTION.LEFT
+			desiredDirection = utils.DIRECTION.LEFT
 	elif (abs(moveDirection.y) - abs(moveDirection.x)) > 0.1:
 		if moveDirection.y < -0.1:
-			desiredDirection = DIRECTION.UP
+			desiredDirection = utils.DIRECTION.UP
 		elif moveDirection.y > 0.1:
-			desiredDirection = DIRECTION.DOWN
+			desiredDirection = utils.DIRECTION.DOWN
 	
 	#Clamp to max speed
 	var linVel = $Rigid.linear_velocity
@@ -105,31 +103,31 @@ func move(delta):
 
 func updateInteraction():
 	match desiredDirection:
-		DIRECTION.UP:
+		utils.DIRECTION.UP:
 			$Rigid/Interaction.position = Vector2(0, -16)
-		DIRECTION.DOWN:
+		utils.DIRECTION.DOWN:
 			$Rigid/Interaction.position = Vector2(0, 16)
-		DIRECTION.LEFT:
+		utils.DIRECTION.LEFT:
 			$Rigid/Interaction.position = Vector2(-16, 0)
-		DIRECTION.RIGHT:
+		utils.DIRECTION.RIGHT:
 			$Rigid/Interaction.position = Vector2(16, 0)
 
 func processSkills():
 	if skill1:
 		match desiredDirection:
-			DIRECTION.UP:
+			utils.DIRECTION.UP:
 				$Rigid/Sword.rotation = 0
 				$Rigid/Sword.position.x = 0
 				$Rigid/Sword.position.y = -16
-			DIRECTION.DOWN:
+			utils.DIRECTION.DOWN:
 				$Rigid/Sword.rotation = PI
 				$Rigid/Sword.position.x = 0
 				$Rigid/Sword.position.y = 16
-			DIRECTION.LEFT:
+			utils.DIRECTION.LEFT:
 				$Rigid/Sword.rotation = -PI/2
 				$Rigid/Sword.position.x = -16
 				$Rigid/Sword.position.y = 0
-			DIRECTION.RIGHT:
+			utils.DIRECTION.RIGHT:
 				$Rigid/Sword.rotation = PI/2
 				$Rigid/Sword.position.x = 16
 				$Rigid/Sword.position.y = 0
@@ -149,17 +147,17 @@ func processSkills():
 		self.add_child(boomerang)
 		#If we are not moving we'll use desired direction
 		match desiredDirection:
-			DIRECTION.UP:
-				boomerang.setStartingPosition($Rigid.global_position + Vector2(0.0, -16.0))
+			utils.DIRECTION.UP:
+				boomerang.setStartingPosition($Rigid.global_position + Vector2(0.0, -8.0))
 				boomerangDirection.y = -1
-			DIRECTION.DOWN:
-				boomerang.setStartingPosition($Rigid.global_position + Vector2(0.0, 16.0))
+			utils.DIRECTION.DOWN:
+				boomerang.setStartingPosition($Rigid.global_position + Vector2(0.0, 8.0))
 				boomerangDirection.y = 1
-			DIRECTION.LEFT:
-				boomerang.setStartingPosition($Rigid.global_position + Vector2(-16.0, 0.0))
+			utils.DIRECTION.LEFT:
+				boomerang.setStartingPosition($Rigid.global_position + Vector2(-8.0, 0.0))
 				boomerangDirection.x = -1
-			DIRECTION.RIGHT:
-				boomerang.setStartingPosition($Rigid.global_position + Vector2(16.0, 0.0))
+			utils.DIRECTION.RIGHT:
+				boomerang.setStartingPosition($Rigid.global_position + Vector2(8.0, 0.0))
 				boomerangDirection.x = 1
 		if(moveDirection.x != 0 && moveDirection.y != 0):
 			boomerangDirection = moveDirection.normalized()
