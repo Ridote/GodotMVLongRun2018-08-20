@@ -11,7 +11,7 @@ config_version=3
 [application]
 
 config/name="LongRun"
-run/main_scene="res://Maps/TestDungeon.tscn"
+run/main_scene="res://Entities/Scenes/Test.tscn"
 config/icon="res://icon.png"
 
 [autoload]
