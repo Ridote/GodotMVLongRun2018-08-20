@@ -5,7 +5,7 @@
 [ext_resource path="res://Entities/MapElements/Lock.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Enemies/EvilBlock/EvilBlock.tscn" type="PackedScene" id=4]
 
-[node name="Map" type="Node2D"]
+[node name="Map" type="Node2D" index="0"]
 
 __meta__ = {
 "_edit_vertical_guides_": [ -69.0 ]
@@ -91,6 +91,7 @@ moveDirection = "left"
 [node name="EvilBlock2" parent="." index="6" instance=ExtResource( 4 )]
 
 position = Vector2( 488, 72 )
+_sections_unfolded = [ "Transform" ]
 moveDirection = "right"
 
 [node name="EvilBlock3" parent="." index="7" instance=ExtResource( 4 )]
@@ -101,6 +102,7 @@ moveDirection = "left"
 [node name="EvilBlock4" parent="." index="8" instance=ExtResource( 4 )]
 
 position = Vector2( 520, 72 )
+_sections_unfolded = [ "Transform" ]
 
 [node name="EvilBlock5" parent="." index="9" instance=ExtResource( 4 )]
 
@@ -116,7 +118,7 @@ position = Vector2( 568, 104 )
 
 [node name="EvilBlock8" parent="." index="12" instance=ExtResource( 4 )]
 
-position = Vector2( 552, 152 )
+position = Vector2( 552, 120 )
 
 [node name="EvilBlock9" parent="." index="13" instance=ExtResource( 4 )]
 

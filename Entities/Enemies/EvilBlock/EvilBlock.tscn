@@ -13,32 +13,23 @@ extents = Vector2( 7.9, 7.9 )
 script = ExtResource( 1 )
 moveDirection = "Down"
 
-[node name="Area2D" type="Area2D" parent="." index="0"]
+[node name="Kinematic2D" type="KinematicBody2D" parent="." index="0"]
 
-input_pickable = true
-gravity_vec = Vector2( 0, 1 )
-gravity = 98.0
-linear_damp = 0.1
-angular_damp = 1.0
+input_pickable = false
 collision_layer = 4
 collision_mask = 21
-audio_bus_override = false
-audio_bus_name = "Master"
+collision/safe_margin = 0.08
 _sections_unfolded = [ "Collision" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" index="0"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kinematic2D" index="0"]
 
 shape = SubResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="Area2D" index="1"]
+[node name="Sprite" type="Sprite" parent="Kinematic2D" index="1"]
 
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 112, 32, 16, 16 )
 _sections_unfolded = [ "Region" ]
-
-[connection signal="area_shape_entered" from="Area2D" to="." method="_on_Area2D_area_shape_entered"]
-
-[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 
 
