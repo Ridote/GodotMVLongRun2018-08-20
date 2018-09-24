@@ -31,7 +31,7 @@ var lastAnimation = null
 var externalForce = Vector2(0,0)
 
 func _ready():
-	pass
+	print("Player:\nFlechas para moverte\nQ para atacar\nE para usar el boomerang\nSpacebar para intentar interaccionar con el medio (cofres)")
 
 func _physics_process(delta):
 	if !casting:
@@ -202,7 +202,6 @@ func _on_Casting_timeout():
 
 
 func _on_Sword_body_entered(body):
-	print(body.get_parent().get_name())
 	body.get_parent().receiveDmg(1,0)
 
 

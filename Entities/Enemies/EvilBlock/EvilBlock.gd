@@ -27,6 +27,7 @@ func _physics_process(delta):
 		if collider.has_method("receiveDamage"):
 			collider.receiveDamage(0,0, $Kinematic2D.global_position)
 		
-		match collider.get_name().substr(0,9):
-			"Player","Map", "EvilBlock":
-				direction = utils.oppositeDirection(direction)
+		direction = utils.oppositeDirection(direction)
+
+func receiveDmg(fis,mag):
+	pass

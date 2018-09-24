@@ -1,11 +1,15 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Graphics/Tilesets/BlueDungeon.tres" type="TileSet" id=1]
 [ext_resource path="res://Entities/Items/SmallChest.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/MapElements/Lock.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/Enemies/EvilBlock/EvilBlock.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entities/Items/SmallKey.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Entities/MapElements/Barrier.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Entities/MapElements/Button.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Entities/MapElements/Block.tscn" type="PackedScene" id=8]
 
-[node name="Map" type="Node2D" index="0"]
+[node name="Map" type="Node2D"]
 
 __meta__ = {
 "_edit_vertical_guides_": [ -69.0 ]
@@ -132,5 +136,25 @@ position = Vector2( 632, 104 )
 [node name="EvilBlock11" parent="." index="15" instance=ExtResource( 4 )]
 
 position = Vector2( 632, 232 )
+
+[node name="SmallKey" parent="." index="16" instance=ExtResource( 5 )]
+
+position = Vector2( 120, 37 )
+
+[node name="SmallKey2" parent="." index="17" instance=ExtResource( 5 )]
+
+position = Vector2( 833, 168 )
+
+[node name="Barrier" parent="." index="18" instance=ExtResource( 6 )]
+
+position = Vector2( 120, 104 )
+
+[node name="Button" parent="Barrier" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( -85, -67 )
+
+[node name="Block" parent="." index="19" instance=ExtResource( 8 )]
+
+position = Vector2( 200, 88 )
 
 

@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Entities/Scenes/Navigation2D.gd" type="Script" id=1]
 [ext_resource path="res://Maps/TestDungeon.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Entities/Player/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Entities/GUI/HUD.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Entities/Items/SmallKey.tscn" type="PackedScene" id=5]
 
 [node name="Test" type="Node2D"]
 
@@ -19,13 +18,5 @@ script = ExtResource( 1 )
 position = Vector2( 287.088, 194.605 )
 
 [node name="HUD" parent="." index="1" instance=ExtResource( 4 )]
-
-[node name="SmallKey" parent="." index="2" instance=ExtResource( 5 )]
-
-position = Vector2( 120.457, 46.8173 )
-
-[node name="SmallKey2" parent="." index="3" instance=ExtResource( 5 )]
-
-position = Vector2( 830.519, 168.25 )
 
 
