@@ -170,6 +170,7 @@ func processSkills():
 		
 func getGlobalPosition():
 	return $Rigid.global_position
+	
 func receiveDamage(fis, mag, from):
 	if !damaged:
 		damaged = true
@@ -184,6 +185,9 @@ func receiveDamage(fis, mag, from):
 	if state.player_hp == 0:
 		queue_free()
 
+func addKeys(num):
+	state.player_keys += num
+	
 func onBoomerangBack():
 	boomerangOnFlight = false
 
@@ -206,8 +210,12 @@ func _on_Interaction_body_entered(body):
 	$Rigid/Interaction.collision_mask = 0
 	match body.get_parent().get_name():
 		"SmallChest":
-			body.get_parent().open()
+			if(state.player_keys > 0):
+				body.get_parent().open()
+				addKeys(-1)
 		"Door":
 			body.get_parent().open()
 		"Lock":
-			body.get_parent().open()
+			if(state.player_keys > 0):
+				body.get_parent().open()
+				addKeys(-1)
