@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Graphics/Tilesets/BlueDungeon.tres" type="TileSet" id=1]
 [ext_resource path="res://Entities/Items/SmallChest.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://Entities/MapElements/Barrier.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Entities/MapElements/Button.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Entities/MapElements/Block.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Entities/MapElements/SceneChanger.tscn" type="PackedScene" id=9]
 
 [node name="Map" type="Node2D"]
 
@@ -156,5 +157,11 @@ position = Vector2( -85, -67 )
 [node name="Block" parent="." index="19" instance=ExtResource( 8 )]
 
 position = Vector2( 200, 88 )
+
+[node name="SceneChanger" parent="." index="20" instance=ExtResource( 9 )]
+
+position = Vector2( 425, 22 )
+scene = "res://Maps/TestMap.tscn"
+location = Vector2( 0, 0 )
 
 

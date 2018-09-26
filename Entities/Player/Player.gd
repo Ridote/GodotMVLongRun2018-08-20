@@ -167,7 +167,9 @@ func processSkills():
 		
 	if interact:
 		$Rigid/Interaction.collision_mask = 128 # Interaction collision mask
-		
+func setGlobalPosition(position):
+	$Rigid.global_position = position
+	
 func getGlobalPosition():
 	return $Rigid.global_position
 	
