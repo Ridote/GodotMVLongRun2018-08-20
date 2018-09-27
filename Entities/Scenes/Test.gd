@@ -24,5 +24,6 @@ func on_shade_timeout():
 	var next_scene = load(new_scene)
 	var next_level = next_scene.instance()
 	$Navigation2D.add_child(next_level)
+	$Navigation2D.move_child(next_level, 0)
 	$Navigation2D/Player.setGlobalPosition(position)
 	$CanvasModulate/CanvasAnimation.play("ShadeOut")
