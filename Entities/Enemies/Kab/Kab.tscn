@@ -1,0 +1,89 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Entities/Enemies/Kab/Kab.gd" type="Script" id=1]
+[ext_resource path="res://Graphics/Sprites/zelda_enemies.png" type="Texture" id=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+
+custom_solver_bias = 0.0
+radius = 6.55502
+height = 8.41129
+
+[sub_resource type="CircleShape2D" id=2]
+
+custom_solver_bias = 0.0
+radius = 10.0
+
+[sub_resource type="Animation" id=3]
+
+resource_name = "alive"
+length = 0.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("KinematicBody2D/CollisionShape2D/Sprite:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ Rect2( 36, 608, 20, 24 ), Rect2( 56, 608, 16, 24 ) ]
+}
+
+[node name="Kab" type="Node2D" index="0"]
+
+script = ExtResource( 1 )
+radius = 20
+speed = 5
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+
+input_pickable = false
+collision_layer = 4
+collision_mask = 17
+collision/safe_margin = 0.08
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="0"]
+
+shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="KinematicBody2D/CollisionShape2D" index="0"]
+
+position = Vector2( 0, -0.230839 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 36, 608, 20, 24 )
+_sections_unfolded = [ "Region" ]
+
+[node name="DiscoverArea" type="Area2D" parent="KinematicBody2D" index="1"]
+
+input_pickable = true
+gravity_vec = Vector2( 0, 1 )
+gravity = 98.0
+linear_damp = 0.1
+angular_damp = 1.0
+collision_layer = 0
+audio_bus_override = false
+audio_bus_name = "Master"
+_sections_unfolded = [ "Collision", "Transform", "Visibility" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D/DiscoverArea" index="0"]
+
+shape = SubResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/alive = SubResource( 3 )
+blend_times = [  ]
+
+
