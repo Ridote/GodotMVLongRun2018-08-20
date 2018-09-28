@@ -17,7 +17,7 @@ radius = 10.0
 [sub_resource type="Animation" id=3]
 
 resource_name = "alive"
-length = 0.5
+length = 0.6
 loop = true
 step = 0.1
 tracks/0/type = "value"
@@ -27,17 +27,17 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.5 ),
+"times": PoolRealArray( 0, 0.3 ),
 "transitions": PoolRealArray( 1, 1 ),
 "update": 1,
-"values": [ Rect2( 36, 608, 20, 24 ), Rect2( 56, 608, 16, 24 ) ]
+"values": [ Rect2( 14, 608, 20, 24 ), Rect2( 36, 608, 20, 24 ) ]
 }
 
 [node name="Kab" type="Node2D" index="0"]
 
 script = ExtResource( 1 )
 radius = 20
-speed = 5
+speed = 50
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
 
@@ -61,6 +61,7 @@ _sections_unfolded = [ "Region" ]
 
 [node name="DiscoverArea" type="Area2D" parent="KinematicBody2D" index="1"]
 
+visible = false
 input_pickable = true
 gravity_vec = Vector2( 0, 1 )
 gravity = 98.0
@@ -85,5 +86,18 @@ playback_default_blend_time = 0.0
 playback_speed = 1.0
 anims/alive = SubResource( 3 )
 blend_times = [  ]
+
+[node name="Invulnerable" type="Timer" parent="." index="2"]
+
+process_mode = 1
+wait_time = 0.5
+one_shot = false
+autostart = false
+
+[connection signal="body_entered" from="KinematicBody2D/DiscoverArea" to="." method="_on_DiscoverArea_body_entered"]
+
+[connection signal="body_exited" from="KinematicBody2D/DiscoverArea" to="." method="_on_DiscoverArea_body_exited"]
+
+[connection signal="timeout" from="Invulnerable" to="." method="_on_Invulnerable_timeout"]
 
 

@@ -29,5 +29,5 @@ func _physics_process(delta):
 		
 		direction = utils.oppositeDirection(direction)
 
-func receiveDmg(fis,mag):
+func receiveDmg(fis,mag, from = null):
 	pass

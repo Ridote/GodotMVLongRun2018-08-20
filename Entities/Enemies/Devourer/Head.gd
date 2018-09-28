@@ -74,7 +74,7 @@ func _physics_process(delta):
 	positionManager.updatePositions($KinematicBody2D.global_position, $KinematicBody2D.global_rotation)
 	firstBody.update()
 
-func receiveDmg(fis, mag):
+func receiveDmg(fis, mag, from = null):
 	hitRecovery = true
 	$HitRecovery.wait_time = hitRecoveryTime
 	$HitRecovery.start()

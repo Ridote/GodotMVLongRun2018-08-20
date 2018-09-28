@@ -1,12 +1,7 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Entities/Enemies/EvilBlock/EvilBlock.gd" type="Script" id=1]
 [ext_resource path="res://Graphics/Tilesets/RogueDungeon.png" type="Texture" id=2]
-
-[sub_resource type="RectangleShape2D" id=1]
-
-custom_solver_bias = 0.0
-extents = Vector2( 7.9, 7.9 )
 
 [node name="EvilBlock" type="Node2D"]
 
@@ -21,15 +16,16 @@ collision_mask = 21
 collision/safe_margin = 0.08
 _sections_unfolded = [ "Collision" ]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kinematic2D" index="0"]
-
-shape = SubResource( 1 )
-
-[node name="Sprite" type="Sprite" parent="Kinematic2D" index="1"]
+[node name="Sprite" type="Sprite" parent="Kinematic2D" index="0"]
 
 texture = ExtResource( 2 )
 region_enabled = true
 region_rect = Rect2( 112, 32, 16, 16 )
 _sections_unfolded = [ "Region" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kinematic2D" index="1"]
+
+build_mode = 0
+polygon = PoolVector2Array( -8, -7, -7, -8, 7, -8, 8, -7, 8, 7, 7, 8, -7, 8, -8, 7 )
 
 
